@@ -128,6 +128,6 @@ class SiteController extends Controller
 
     public function actionMy()
     {
-        return $this->render('my');
+        return 'Hello World!!!';
     }
 }
