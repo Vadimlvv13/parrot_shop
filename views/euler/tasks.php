@@ -17,7 +17,7 @@ $this->title = 'Project Euler Task1';
     </div>
 
     <div class="body-content">
-        <a href="/euler/task1">Задача №1</a>
+        <a href="/web/euler/task1">Задача №1</a>
         
         <p class="lead">Задача №2.</p>
         <p class="lead">Задача №3.</p>
