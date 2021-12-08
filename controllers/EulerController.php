@@ -33,7 +33,7 @@ class EulerController extends Controller
 	public function actionTask1()
 	{
 		$r_mas = array();
-		for ($i=0; $i = 1000; $i++) { 
+		for ($i=0; $i < 1000; $i++) { 
 			$a3 = $i % 3;
 			$a5 = $i % 5;
 			if ($a3 == 0 or $a5 == 0) {
