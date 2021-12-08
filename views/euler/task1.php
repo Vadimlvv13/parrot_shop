@@ -5,9 +5,11 @@
 $this->title = 'Project Euler Task1';
 ?>
 <div class="euler-task1">
+    <div class="jumbotron text-center bg-transparent">
     <h1 class="display-4">Проект Ейлера</h1>
+    </div>
     <div>
-        <a href="/web/eulertasks">&#<;- Back to list</a>
+        <a href="/web/eulertasks">Back to list</a>
     </div>
     <div class="jumbotron text-center bg-transparent">
         <h1 class="display-4">Задача №1</h1>
