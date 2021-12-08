@@ -13,6 +13,18 @@ use app\models\ContactForm;
 class EulerController extends Controller
 {
 
+	public $layout = 'euler';
+
+	/**
+   * Project Euler task list.
+   *
+   * @return mixed
+   */
+	public function actionTasks()
+	{
+		return $this->render('tasks');
+	}
+
 	/**
    * Project Euler task #1.
    *
