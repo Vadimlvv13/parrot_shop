@@ -57,10 +57,32 @@ class EulerController extends Controller
    */
 	public function actionTask2()
 	{
-		
+		$fib = array(1, 2);
+		$fib2 = array();
+		$sum = 0;
+		$z = true;
+		while ($z == true) {
+		 	$a = $fib[count($fib)-2] + $fib[count($fib)-1];
+		 	if ($a <= 100){
+		 		$fib[] = $a;
+		 		$a = 0;
+		 	}
+		 	else{
+		 		$z = false;
+		 	}
+		 }
+
+		 foreach ($fib as $value) {
+		 	if ($value % 2 == 0) {
+		 		$fib2[] = $value;
+		 		$sum = $sum + $value;
+		 	}
+
+		 }
+
 
 		return $this->render('task2', [
-			
+			'fib' => $fib, 'fib2' => $fib2, 'sum' => $sum,
 		]);
 	}
 }

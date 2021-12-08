@@ -5,7 +5,7 @@
 $this->title = 'Project Euler Task2';
 ?>
 <div class="euler-task1">
-    <h1 class="display-4", style="text-align: center">Проект Ейлера</h1>
+    <h1 class="display-4", style="text-align: center">Проект Эйлера</h1>
     <div>
         <a href="/web/euler/tasks">Back to list</a>
     </div>
@@ -29,9 +29,15 @@ $this->title = 'Project Euler Task2';
     <div class="body-content">
         <?php 
             //echo '<p>Сумма всех чисел меньше 1000 равна '.$sum.'.</p>';
-            //echo '<pre>';
-            //var_dump($r_mas);
-            //echo '</pre>';
+            echo '<pre>';
+            var_dump($fib);
+            echo '</pre>';
+            echo '<br><br>';
+            echo '<pre>';
+            var_dump($fib2);
+            echo '</pre>';
+            echo '<br><br>';
+            echo $sum;
         ?>
         
 
