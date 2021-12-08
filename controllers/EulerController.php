@@ -33,16 +33,20 @@ class EulerController extends Controller
 	public function actionTask1()
 	{
 		$r_mas = array();
-		for ($i=0; $i < 1000; $i++) { 
+		$sum = 0;
+		for ($i=1; $i < 1000; $i++) { 
 			$a3 = $i % 3;
 			$a5 = $i % 5;
 			if ($a3 == 0 or $a5 == 0) {
 				$r_mas[] = $i;
 			}
 		}
+		foreach ($r_mas as $val) {
+			$sum = $sum + $val;
+		}
 
 		return $this->render('task1', [
-			'r_mas' => $r_mas,
+			'sum' => $sum,
 		]);
 	}
 }

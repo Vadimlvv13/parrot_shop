@@ -23,9 +23,10 @@ $this->title = 'Project Euler Task1';
 
     <div class="body-content">
         <?php 
-            echo '<pre>';
-            var_dump($r_mas);
-            echo '</pre>';
+            echo '<p> '.$sum.' </p>';
+            //echo '<pre>';
+            //var_dump($r_mas);
+            //echo '</pre>';
         ?>
         
 
