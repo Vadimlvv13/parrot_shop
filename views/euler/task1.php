@@ -22,7 +22,11 @@ $this->title = 'Project Euler Task1';
     </div>
 
     <div class="body-content">
-        <p>Result</p>
+        <?php 
+            echo '<pre>';
+            var_dump($r_mas);
+            echo '</pre>';
+        ?>
         
 
     </div>
