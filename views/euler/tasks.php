@@ -19,6 +19,7 @@ $this->title = 'Project Euler Tasks List';
             <a href="/web/euler/task1">Задача №1<a>
             <br>
             <p>Числа, кратные 3 или 5.</p>
+            <h2 style="text-decoration-color: green;">Выполнено</h2>
         </div>
 
         <div class="jumbotron">
