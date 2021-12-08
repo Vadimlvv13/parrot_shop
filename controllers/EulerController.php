@@ -63,7 +63,7 @@ class EulerController extends Controller
 		$z = true;
 		while ($z == true) {
 		 	$a = $fib[count($fib)-2] + $fib[count($fib)-1];
-		 	if ($a <= 100){
+		 	if ($a <= 4000000){
 		 		$fib[] = $a;
 		 		$a = 0;
 		 	}
