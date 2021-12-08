@@ -23,7 +23,7 @@ $this->title = 'Project Euler Task1';
 
     <div class="body-content">
         <?php 
-            echo '<p> '.$sum.' </p>';
+            echo '<p>Сумма всех чисел меньше 1000 равна '.$sum.'.</p>';
             //echo '<pre>';
             //var_dump($r_mas);
             //echo '</pre>';
