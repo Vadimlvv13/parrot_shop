@@ -49,5 +49,19 @@ class EulerController extends Controller
 			'sum' => $sum,
 		]);
 	}
+
+	/**
+   * Project Euler task #2.
+   *
+   * @return mixed
+   */
+	public function actionTask2()
+	{
+		
+
+		return $this->render('task2', [
+			
+		]);
+	}
 }
 ?>
