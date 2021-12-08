@@ -26,7 +26,7 @@ $this->title = 'Project Euler Tasks List';
             <a href="/web/euler/task2">Задача №2<a>
             <br>
             <p>Четные числа Фибоначчи.</p>
-            <!-- <h5 style="color: green;">Выполнено</h5> -->
+            <h5 style="color: green;">Выполнено</h5>
         </div>
         
         <div class="jumbotron">
