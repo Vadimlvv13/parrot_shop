@@ -5,11 +5,11 @@
 $this->title = 'Project Euler Task1';
 ?>
 <div class="euler-task1">
-    <div class="jumbotron">
+    <div class="alert">
         <a href="/web/eulertasks">Euler Tasks</a>
     </div>
     <div class="jumbotron text-center bg-transparent">
-        <!--<h1 class="display-4">Проект Ейлера Задача №1</h1>-->
+        <h1 class="display-4">Проект Ейлера Задача №1</h1>
         <h2>Числа, кратные 3 или 5.</h2>
         <p class="lead">
 
