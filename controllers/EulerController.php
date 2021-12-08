@@ -37,7 +37,7 @@ class EulerController extends Controller
 			$a3 = $i % 3;
 			$a5 = $i % 5;
 			if ($a3 == 0 or $a5 == 0) {
-				$r_mas = [$i];
+				$r_mas[] = $i;
 			}
 		}
 
