@@ -5,12 +5,12 @@
 $this->title = 'Project Euler Task1';
 ?>
 <div class="euler-task1">
-    <div class="button">
+    <div class="jumbotron">
         <a href="/web/eulertasks">Euler Tasks</a>
     </div>
     <div class="jumbotron text-center bg-transparent">
         <h1 class="display-4">Project Euler Task #1</h1>
-        <h2 class="display-4">Числа, кратные 3 или 5.</h2>
+        <h2 class="modal-header">Числа, кратные 3 или 5.</h2>
         <p class="lead">
 
 Если выписать все натуральные числа меньше 10, кратные 3 или 5, то получим 3, 5, 6 и 9. Сумма этих чисел равна 23.
