@@ -111,6 +111,9 @@ class EulerController extends Controller
 						$result = $b;
 						$z = false;
 					}
+					else{
+						$b=$b-1;
+					}
 					
 				}
 				
