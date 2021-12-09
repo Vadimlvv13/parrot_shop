@@ -94,9 +94,11 @@ class EulerController extends Controller
 	public function actionTask3()
 	{
 		$z = true;
-		$a = 346;
+		$a = 13195;
 		$b = $a - 1; //29
-			
+		
+		
+		
 		while ($z == true){
 			
 			for ($i=2; $i < $b; $i++) { //$i=28
@@ -105,12 +107,16 @@ class EulerController extends Controller
 					break;
 				}
 				elseif ($i == $b-1){
-					$result = $b;
-					$z = false;
+					if ($a % $b == 0) {
+						$result = $b;
+						$z = false;
+					}
+					
 				}
 				
 			}
 		}
+		
 
 
 
