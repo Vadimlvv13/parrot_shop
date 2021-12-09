@@ -29,15 +29,15 @@ $this->title = 'Project Euler Task3';
     <div class="body-content">
         <?php 
             //echo '<p>Сумма всех чисел меньше 1000 равна '.$sum.'.</p>';
-            echo '<pre>';
-            var_dump($arr);
-            echo '</pre>';
+            // echo '<pre>';
+            // var_dump($arr);
+            // echo '</pre>';
             // echo '<br><br>';
             // echo '<pre>';
             // var_dump($fib2);
             // echo '</pre>';
             // echo '<br><br>';
-            // echo $sum;
+            echo $result;
         ?>
         
 

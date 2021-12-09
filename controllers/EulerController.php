@@ -94,20 +94,28 @@ class EulerController extends Controller
 	public function actionTask3()
 	{
 		$z = true;
-		$a = 13195;
-		$b = $a-1;
-		$arr = array();
-		for ($i=0; $i < 10; $i++) {
-			$arr[] = $i;
-			if ($i == 5) {
-				break;
+		$a = 30;
+		$b = $a - 1; //29
+			
+		while ($z == true){
+			
+			for ($i=2; $i < $b; $i++) { //$i=28
+				if ($b % $i == 0) {
+					$b=$b-1;
+					break;
+				}
+				elseif ($i == $b-1){
+					$result = $b;
+					$z = false;
+				}
+				
 			}
 		}
 
 
 
 		return $this->render('task3', [
-			'arr' => $arr,
+			'result' => $result,
 		]);
 	}
 }
