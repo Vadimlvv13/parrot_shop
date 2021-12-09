@@ -85,5 +85,20 @@ class EulerController extends Controller
 			'fib' => $fib, 'fib2' => $fib2, 'sum' => $sum,
 		]);
 	}
+
+	/**
+   * Project Euler task #3.
+   *
+   * @return mixed
+   */
+	public function actionTask3()
+	{
+		
+
+
+		return $this->render('task3', [
+			
+		]);
+	}
 }
 ?>
