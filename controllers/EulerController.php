@@ -100,7 +100,7 @@ class EulerController extends Controller
 		for ($i=0; $i < 10; $i++) {
 			$arr[] = $i;
 			if ($i == 5) {
-				return break;
+				break;
 			}
 		}
 
