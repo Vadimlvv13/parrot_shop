@@ -113,10 +113,7 @@ class EulerController extends Controller
 						break;
 					}
 				}
-				else{
-					$mas = $a;
-					$z = false;
-				}
+				
 			}
 
 		}
