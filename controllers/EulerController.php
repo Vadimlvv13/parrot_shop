@@ -97,10 +97,10 @@ class EulerController extends Controller
 		$a = 13195;//600851475143;
 
 		
-			$mas = true;
+			$mas = 1;
 			for ($i = 2; $i <= sqrt($a); $i++) {
 				if ($a % $i == 0) {
-					$mas = false;
+					$mas = 0;
 					}
 				}
 				
