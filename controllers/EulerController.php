@@ -97,7 +97,7 @@ class EulerController extends Controller
 		$a = 13195;//600851475143;
 
 			
-		while ($z = true){
+		while ($z == true){
 			for ($i=2; $i < sqrt($a); $i++) {
 				if ($a % $i == 0) {
 					$a = $a/$i;
