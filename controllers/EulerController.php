@@ -99,9 +99,10 @@ class EulerController extends Controller
 		function FunctionRev($a)
 		{
 			
-			for ($i = 2; $i < sqrt($a); $i++) {
+			for ($i = 2; $i <= sqrt($a); $i++) {
 				if ($a % $i == 0) {
 					return false;
+					break;
 					}
 				}
 				return true;
