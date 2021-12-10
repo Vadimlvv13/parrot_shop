@@ -100,10 +100,10 @@ class EulerController extends Controller
 			
 			for ($i = 2; $i <= sqrt($a); $i++) {
 				if ($a % $i == 0) {
-					$mas false;
+					$mas = false;
 					}
 				}
-				$mas true;
+				$mas = true;
 		
 
 		
