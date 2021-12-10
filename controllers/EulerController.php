@@ -94,30 +94,20 @@ class EulerController extends Controller
 	public function actionTask3()
 	{
 		$z = true;
-		$a = 600851475143;
-		$b = $a - 1;
-		
-		
-		
-		while ($z == true){
+		$a = 13195;//600851475143;
+		$b = $a
+
 			
-			for ($i=2; $i < $b; $i++) {
-				if ($b % $i == 0) {
-					$b=$b-1;
-					break;
-				}
-				elseif ($i == $b-1){
-					if ($a % $b == 0) {
-						$result = $b;
-						$z = false;
-					}
-					else{
-						$b=$b-1;
-					}
-					
-				}
-				
+		
+		for ($i=2; $i < sqrt($a); $i++) {
+			if ($a % $i == 0) {
+				$a = $a/$i;
+				break;
+			}else{
+				$result = $a;
 			}
+			
+			
 		}
 		
 
