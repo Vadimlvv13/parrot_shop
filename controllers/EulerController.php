@@ -96,19 +96,17 @@ class EulerController extends Controller
 		$z = true;
 		$a = 13195;//600851475143;
 
-		function FunctionRev($a)
-		{
+		
 			
 			for ($i = 2; $i <= sqrt($a); $i++) {
 				if ($a % $i == 0) {
-					return false;
-					break;
+					$mas false;
 					}
 				}
-				return true;
-		}
+				$mas true;
+		
 
-		$mas = FunctionRev($a);
+		
 
 		
 
