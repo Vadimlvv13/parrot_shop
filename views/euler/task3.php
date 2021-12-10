@@ -30,14 +30,14 @@ $this->title = 'Project Euler Task3';
         <?php 
             //echo '<p>Сумма всех чисел меньше 1000 равна '.$sum.'.</p>';
             // echo '<pre>';
-            // var_dump($arr);
+            var_dump($mas);
             // echo '</pre>';
             // echo '<br><br>';
             // echo '<pre>';
             // var_dump($fib2);
             // echo '</pre>';
             // echo '<br><br>';
-            echo $result;
+            // echo $result;
         ?>
         
 
