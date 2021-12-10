@@ -95,7 +95,6 @@ class EulerController extends Controller
 	{
 		$z = true;
 		$a = 13195;//600851475143;
-		$b = $a
 
 			
 		while ($z = true){
