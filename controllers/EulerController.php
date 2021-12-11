@@ -98,7 +98,7 @@ class EulerController extends Controller
 
 		
 		while ($z = true){
-
+			$b = $a;
 			for ($i = 2; $i <= sqrt($a); $i++) {
 				if ($a % $i == 0) {
 					$flag = true;
@@ -106,6 +106,7 @@ class EulerController extends Controller
 
 						if ($i % $q == 0) {
 							$flag = false;
+							break;
 						}
 					}
 					if ($flag = true) {
@@ -115,7 +116,10 @@ class EulerController extends Controller
 				}
 				
 			}
-
+			if ($a == $b) {
+				$z = false;
+				$mas = $a;
+			}
 		}
 		
 
