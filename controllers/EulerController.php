@@ -96,7 +96,6 @@ class EulerController extends Controller
 		$z = true;
 		$a = 600851475143; // 13195;
 
-		
 		while ($z == true){
 			$b = $a;
 			for ($i = 2; $i <= sqrt($a); $i++) {
@@ -121,16 +120,23 @@ class EulerController extends Controller
 				$mas = $a;
 			}
 		}
-		
-
-		
-
-		
-
-
 
 		return $this->render('task3', [
 			'mas' => $mas,
+		]);
+	}
+
+	/**
+   * Project Euler task #4.
+   *
+   * @return mixed
+   */
+	public function actionTask4()
+	{
+		
+
+		return $this->render('task4', [
+			
 		]);
 	}
 }
