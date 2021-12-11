@@ -33,7 +33,7 @@ $this->title = 'Project Euler Tasks List';
             <a href="/web/euler/task3">Задача №3<a>
             <br>
             <p>Наибольший простой делитель.</p>
-            <!-- <h5 style="color: green;">Выполнено</h5> -->
+            <h5 style="color: green;">Выполнено</h5>
         </div>
         <div class="jumbotron">
             <a href="/web/euler/task4">Задача №4<a>
