@@ -109,7 +109,7 @@ class EulerController extends Controller
 							break;
 						}
 					}
-					if ($flag = true) {
+					if ($flag == true) {
 						$a /= $i;
 						break;
 					}
