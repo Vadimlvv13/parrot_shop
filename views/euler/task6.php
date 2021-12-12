@@ -41,7 +41,7 @@ $this->title = 'Project Euler Task6';
             // var_dump($fib2);
             // echo '</pre>';
             // echo '<br><br>';
-            // echo $word;
+             echo $res;
             // echo $d;
         ?>
         
