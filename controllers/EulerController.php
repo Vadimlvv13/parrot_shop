@@ -133,6 +133,7 @@ class EulerController extends Controller
    */
 	public function actionTask4()
 	{
+		$res = [1, 1, 1];
 		$mas = array();
 		for ($i=100; $i < 1000; $i++) { 
 			for ($j=100; $j < 1000; $j++) { 
@@ -143,11 +144,16 @@ class EulerController extends Controller
 				}
 			}
 		}
+		foreach ($mas as $val) {
+			if ($val[2] > $res[2]) {
+				$res = [$val[0], $val[1], $val[2]];
+			}
+		}
 
 
 
 		return $this->render('task4', [
-			'mas' => $mas,
+			'res' => $res,
 		]);
 	}
 }
