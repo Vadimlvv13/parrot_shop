@@ -134,8 +134,8 @@ class EulerController extends Controller
 	public function actionTask4()
 	{
 		$mas = array();
-		for ($i=1; $i < 100; $i++) { 
-			for ($j=1; $j < 100; $j++) { 
+		for ($i=100; $i < 1000; $i++) { 
+			for ($j=100; $j < 1000; $j++) { 
 				$a = $i*$j;
 				$word = strrev(strval($a));
 				if ($a == intval($word)) {
