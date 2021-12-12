@@ -171,11 +171,12 @@ class EulerController extends Controller
 			$flag = false;
 			for ($j=1; $j <= 10; $j++) {
 				if ($i % $j != 0){
+					$flag = true;
 					break;
 				}
-				$flag = true;
+				
 			}
-			if ($flag == true){
+			if ($flag == false){
 				$res = $i;
 				$z = false;
 			}
