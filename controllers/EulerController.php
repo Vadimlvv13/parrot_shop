@@ -164,10 +164,25 @@ class EulerController extends Controller
    */
 	public function actionTask5()
 	{
-		
+		$z = true;
+		$i = 0;
+		while ($z == true) {
+			$i += 1;
+			$flag = false;
+			for ($j=1; $j <= 10; $j++) {
+				if ($i % $j != 0){
+					break;
+				}
+				$flag = true;
+			}
+			if ($flag == true){
+				$res = $i;
+				$z = false;
+			}
+		}
 
 		return $this->render('task5', [
-			
+			'res' => $res,
 		]);
 	}
 }
