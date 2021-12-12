@@ -51,7 +51,7 @@ $this->title = 'Project Euler Tasks List';
             <a href="/web/euler/task6">Задача №6<a>
             <br>
             <p>Разность между суммой квадратов и квадратом суммы.</p>
-            <!-- <h5 style="color: green;">Выполнено</h5> -->
+            <h5 style="color: green;">Выполнено</h5>
         </div><div class="jumbotron">
             <a href="/web/euler/task7">Задача №7<a>
             <br>
