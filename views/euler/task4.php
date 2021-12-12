@@ -28,9 +28,12 @@ $this->title = 'Project Euler Task4';
 
     <div class="body-content">
         <?php 
+            foreach ($mas as $value) {
+                echo $value[0].' x '.$value[1].' = '.$value[2];
+            }
             //echo '<p>Сумма всех чисел меньше 1000 равна '.$sum.'.</p>';
             // echo '<pre>';
-             var_dump($mas);
+            // var_dump($mas);
             // echo '</pre>';
             // echo '<br><br>';
             // echo '<pre>';
