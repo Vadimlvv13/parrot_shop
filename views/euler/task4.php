@@ -33,14 +33,14 @@ $this->title = 'Project Euler Task4';
             }*/
             //echo '<p>Сумма всех чисел меньше 1000 равна '.$sum.'.</p>';
             // echo '<pre>';
-             var_dump($res);
+            // var_dump($res);
             // echo '</pre>';
             // echo '<br><br>';
             // echo '<pre>';
             // var_dump($fib2);
             // echo '</pre>';
             // echo '<br><br>';
-            // echo $a;
+             echo 'Cамый большой палиндром, полученный умножением двух трехзначных чисел'.$res[2].' = '.$res[0].' x '.$res[1].'.';
             // echo $word;
             // echo $d;
         ?>
