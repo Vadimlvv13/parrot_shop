@@ -147,12 +147,12 @@ class EulerController extends Controller
 		$a = 91;
 		$b = 99;
 		$c = $a*$b;
-		$word = strrev(strval($c));
-		$d = intval($c);
+		//$word = strrev(strval($c));
+		//$d = intval($c);
 
 
 		return $this->render('task4', [
-			'$c' => $c, '$d' => $d, '$word' => $word,
+			'$a' => $a, //'$d' => $d, '$word' => $word,
 		]);
 	}
 }

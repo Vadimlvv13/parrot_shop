@@ -37,9 +37,9 @@ $this->title = 'Project Euler Task4';
             // var_dump($fib2);
             // echo '</pre>';
             // echo '<br><br>';
-             echo $c;
-             echo $word;
-             echo $d;
+             echo $a;
+            // echo $word;
+            // echo $d;
         ?>
         
 
