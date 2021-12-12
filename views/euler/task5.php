@@ -27,7 +27,7 @@ $this->title = 'Project Euler Task5';
             /*foreach ($res as $value) {
                 echo $value[0].' x '.$value[1].' = '.$value[2].'<br>';
             }*/
-            echo '<p>'.$res.' - самое маленькое число, которое делится без остатка на все числа от 1 до 10.</p>';
+            echo '<p>'.$res.' - самое маленькое число, которое делится без остатка на все числа от 1 до 20.</p>';
             // echo '<pre>';
             // var_dump($res);
             // echo '</pre>';
