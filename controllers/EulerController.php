@@ -139,7 +139,7 @@ class EulerController extends Controller
 				$a = $i*$j;
 				$word = strrev(strval($a));
 				if ($a == intval($word)) {
-					$mas[] = [$i, $j, $a];
+					$mas[] = ["$i", "$j", "$a"];
 				}
 			}
 		}
