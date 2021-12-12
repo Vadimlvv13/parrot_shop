@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Project Euler Task4';
+$this->title = 'Project Euler Task5';
 ?>
 <div class="euler-task1">
     <h1 class="display-4", style="text-align: center">Проект Эйлера</h1>
@@ -10,17 +10,13 @@ $this->title = 'Project Euler Task4';
         <a href="/web/euler/tasks">Back to list</a>
     </div>
     <div class="jumbotron text-center bg-transparent">
-        <h1 class="display-4">Задача №4</h1>
-        <h2>Наибольшее произведение-палиндром.</h2>
+        <h1 class="display-4">Задача №5</h1>
+        <h2>Наименьшее кратное.</h2>
         <p class="lead">
 
+2520 - самое маленькое число, которое делится без остатка на все числа от 1 до 10.
 
-
-
-
-Число-палиндром с обеих сторон (справа налево и слева направо) читается одинаково. Самое большое число-палиндром, полученное умножением двух двузначных чисел – 9009 = 91 × 99.
-
-Найдите самый большой палиндром, полученный умножением двух трехзначных чисел.
+Какое самое маленькое число делится нацело на все числа от 1 до 20?
 
 </p>
 
@@ -40,7 +36,6 @@ $this->title = 'Project Euler Task4';
             // var_dump($fib2);
             // echo '</pre>';
             // echo '<br><br>';
-             echo 'Cамый большой палиндром, полученный умножением двух трехзначных чисел - '.$res[2].' = '.$res[0].' x '.$res[1].'.';
             // echo $word;
             // echo $d;
         ?>
