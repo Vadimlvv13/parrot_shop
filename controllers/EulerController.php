@@ -133,7 +133,7 @@ class EulerController extends Controller
    */
 	public function actionTask4()
 	{
-		/*$mas = array();
+		$mas = array();
 		for ($i=1; $i < 100; $i++) { 
 			for ($j=1; $j < 100; $j++) { 
 				$a = $i*$j;
@@ -142,17 +142,12 @@ class EulerController extends Controller
 					$mas[] = ["$i", "$j", "$a"];
 				}
 			}
-		}*/
+		}
 
-		$a = 91;
-		$b = 99;
-		$c = $a*$b;
-		//$word = strrev(strval($c));
-		//$d = intval($c);
 
 
 		return $this->render('task4', [
-			'$a' => $a, //'$d' => $d, '$word' => $word,
+			'mas' => $mas,
 		]);
 	}
 }
