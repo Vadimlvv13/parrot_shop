@@ -195,7 +195,7 @@ class EulerController extends Controller
 	public function actionTask6()
 	{
 		$sum1 = $sum2 = 0;
-		for ($i=1; $i <= 10; $i++) { 
+		for ($i=1; $i <= 100; $i++) { 
 			$sum1 += ($i*$i);
 			$sum2 += $i;
 		}

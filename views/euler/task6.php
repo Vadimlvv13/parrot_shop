@@ -41,7 +41,7 @@ $this->title = 'Project Euler Task6';
             // var_dump($fib2);
             // echo '</pre>';
             // echo '<br><br>';
-             echo $res;
+             echo 'Разность между суммой квадратов и квадратом суммы первых ста натуральных чисел = '.$res.'.';
             // echo $d;
         ?>
         
