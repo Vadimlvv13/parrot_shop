@@ -48,27 +48,27 @@ $this->title = 'Project Euler Tasks List';
             <h5 style="color: green;">Выполнено</h5>
         </div>
         <div class="jumbotron">
-            <a href="/web/euler/task5">Задача №6<a>
+            <a href="/web/euler/task6">Задача №6<a>
             <br>
             <p>Разность между суммой квадратов и квадратом суммы.</p>
             <!-- <h5 style="color: green;">Выполнено</h5> -->
         </div><div class="jumbotron">
-            <a href="/web/euler/task5">Задача №7<a>
+            <a href="/web/euler/task7">Задача №7<a>
             <br>
             <p>10001-е простое число.</p>
             <!-- <h5 style="color: green;">Выполнено</h5> -->
         </div><div class="jumbotron">
-            <a href="/web/euler/task5">Задача №8<a>
+            <a href="/web/euler/task8">Задача №8<a>
             <br>
             <p>Наибольшее произведение в последовательности.</p>
             <!-- <h5 style="color: green;">Выполнено</h5> -->
         </div><div class="jumbotron">
-            <a href="/web/euler/task5">Задача №9<a>
+            <a href="/web/euler/task9">Задача №9<a>
             <br>
             <p>Особая тройка Пифагора.</p>
             <!-- <h5 style="color: green;">Выполнено</h5> -->
         </div><div class="jumbotron">
-            <a href="/web/euler/task5">Задача №10<a>
+            <a href="/web/euler/task10">Задача №10<a>
             <br>
             <p>Сложение простых чисел.</p>
             <!-- <h5 style="color: green;">Выполнено</h5> -->
