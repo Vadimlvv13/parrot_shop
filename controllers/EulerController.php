@@ -215,7 +215,7 @@ class EulerController extends Controller
 	{
 		$count = 0;
 		$j = 1;
-		while ($count < 6) {
+		while ($count < 10001) {
 			$j += 1;
 			$flag = true;
 			for ($i=2; $i <= sqrt($j); $i++) { 
