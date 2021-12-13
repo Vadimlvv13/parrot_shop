@@ -226,10 +226,11 @@ class EulerController extends Controller
 			if ($flag == true) {
 				$count += 1;
 			}
+			$j += 1;
 		}
 
 		return $this->render('task7', [
-			'count' => $count,
+			'j' => $j,
 		]);
 	}
 }
