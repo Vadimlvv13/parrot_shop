@@ -24,17 +24,7 @@ $this->title = 'Project Euler Task7';
 
     <div class="body-content">
         <?php 
-            /*foreach ($res as $value) {
-                echo $value[0].' x '.$value[1].' = '.$value[2].'<br>';
-            }*/
-            // echo '<pre>';
-            // var_dump($res);
-            // echo '</pre>';
-            // echo '<br><br>';
-            // echo '<pre>';
-            // var_dump($fib2);
-            // echo '</pre>';
-            // echo '<br><br>';
+            
             echo '10001-м простым числом является - '.$j.'.';
         ?>
         
