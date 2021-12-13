@@ -48,7 +48,7 @@ $this->title = 'Project Euler Task8';
 
     <div class="body-content">
         <?php 
-            foreach ($arr as $value) {
+            foreach ($str as $value) {
                 echo $value.'<br>';
             }
             
