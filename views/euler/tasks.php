@@ -68,7 +68,7 @@ $this->title = 'Project Euler Tasks List';
             <a href="/web/euler/task8">Задача №8<a>
             <br>
             <p>Наибольшее произведение в последовательности.</p>
-            <!-- <h5 style="color: green;">Выполнено</h5> -->
+            <h5 style="color: green;">Выполнено</h5>
         </div>
 
         <div class="jumbotron">
@@ -77,7 +77,7 @@ $this->title = 'Project Euler Tasks List';
             <p>Особая тройка Пифагора.</p>
             <!-- <h5 style="color: green;">Выполнено</h5> -->
         </div>
-        
+
         <div class="jumbotron">
             <a href="/web/euler/task10">Задача №10<a>
             <br>

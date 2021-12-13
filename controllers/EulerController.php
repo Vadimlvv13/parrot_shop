@@ -260,5 +260,19 @@ class EulerController extends Controller
 			'res' => $res,
 		]);
 	}
+
+	/**
+   * Project Euler task #9.
+   *
+   * @return mixed
+   */
+	public function actionTask9()
+	{
+		
+
+		return $this->render('task9', [
+			//'res' => $res,
+		]);
+	}
 }
 ?>
