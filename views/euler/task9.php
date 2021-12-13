@@ -34,8 +34,8 @@ a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup><br><br>
 
     <div class="body-content">
         <?php 
-            echo $y.'<sup>2</sup> + '.$x.'<sup>2</sup> = '.$z.'<sup>2</sup>.';
-            echo $y.' + '.$x.' + '.$z.' = 1000.';
+            echo $y.'<sup>2</sup> + '.$x.'<sup>2</sup> = '.$z.'<sup>2</sup>.<br>';
+            echo $y.' + '.$x.' + '.$z.' = 1000.<br>';
             echo $y.' x '.$x.' x '.$z.' = '.$res;
         ?>
         
