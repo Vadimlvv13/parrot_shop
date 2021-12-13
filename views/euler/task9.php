@@ -34,7 +34,7 @@ a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup><br><br>
 
     <div class="body-content">
         <?php 
-            
+            echo $x+$y+$z.' = '.$res;
         ?>
         
 

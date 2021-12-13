@@ -268,10 +268,23 @@ class EulerController extends Controller
    */
 	public function actionTask9()
 	{
-		
+		$m = 1;
+		while ($res == NULL){
+			$m += 1; 
+			for ($n=1; $n < $m; $n++) { 
+				$x = ($m*$m)-($n*$n);
+				$y = 2*$m*$n;
+				$z = ($m*$m)+($n*$n);
+				if ($x+$y+$z == 1000) {
+					$res = $x*$y*$z;
+					break;
+				}
+			}
+
+		}
 
 		return $this->render('task9', [
-			//'res' => $res,
+			'res' => $res, 'x' => $x, 'y' => $y, 'z' => $z, 
 		]);
 	}
 }
