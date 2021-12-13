@@ -214,8 +214,9 @@ class EulerController extends Controller
 	public function actionTask7()
 	{
 		$count = 0;
-		$j = 2;
+		$j = 1;
 		while ($count < 6) {
+			$j += 1;
 			$flag = true;
 			for ($i=2; $i <= sqrt($j); $i++) { 
 				if ($j % $i == 0){
@@ -226,7 +227,6 @@ class EulerController extends Controller
 			if ($flag == true) {
 				$count += 1;
 			}
-			$j += 1;
 		}
 
 		return $this->render('task7', [
