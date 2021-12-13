@@ -249,7 +249,7 @@ class EulerController extends Controller
 
 
 		return $this->render('task8', [
-			'arr' => $arr;
+			'arr' => $arr,
 		]);
 	}
 }
