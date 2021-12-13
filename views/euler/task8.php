@@ -48,10 +48,10 @@ $this->title = 'Project Euler Task8';
 
     <div class="body-content">
         <?php 
-            foreach ($arr as $value) {
+            /*foreach ($arr as $value) {
                 echo $value.'<br>';
-            }
-            
+            }*/
+            echo 'Наибольшее произведение тринадцати последовательных цифр в данном числе - '.$res[0].' = '.$res[1].' x '.$res[2].' x '.$res[3].' x '.$res[4].'.';
         ?>
         
 
