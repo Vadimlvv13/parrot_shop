@@ -35,7 +35,7 @@ $this->title = 'Project Euler Task7';
             // var_dump($fib2);
             // echo '</pre>';
             // echo '<br><br>';
-            echo '10001-м простым числом является - '.$count'.';
+            echo '10001-м простым числом является - '.$count.'.';
         ?>
         
 
