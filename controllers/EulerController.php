@@ -344,7 +344,7 @@ class EulerController extends Controller
 			[20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
 			[1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 		];
-		function add(){
+		public function add(){
 			echo "123";
 		}
 		$test = add();
@@ -353,5 +353,7 @@ class EulerController extends Controller
 			 'matrix' => $matrix, 'test' => $test,
 		]);
 	}
+
+
 }
 ?>
