@@ -349,7 +349,7 @@ class EulerController extends Controller
 			return "123";
 		}
 
-		$test = Self::add();
+		$test = add();
 
 		return $this->render('task011', [
 			 'matrix' => $matrix, 'test' => $test,
