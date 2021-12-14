@@ -20,7 +20,7 @@ $this->title = 'Project Euler Task11';
 
 
 В таблице 20×20 (внизу) четыре числа на одной диагонали выделены красным.<br><br>
-<table style="margin:0 auto;" cellspacing = "5">
+<table style="margin:0 auto;" cellspacing = "10">
 <tr>
     <td>08</td> <td>02</td> <td>22</td> <td>97</td> <td>38</td> <td>15</td> <td>00</td> <td>40</td> <td>00</td> <td>75</td> <td>04</td> <td>05</td> <td>07</td> <td>78</td> <td>52</td> <td>12</td> <td>50</td> <td>77</td> <td>91</td> <td>08</td>
 </tr>
@@ -81,7 +81,7 @@ $this->title = 'Project Euler Task11';
 <tr>
     <td>01</td> <td>70</td> <td>54</td> <td>71</td> <td>83</td> <td>51</td> <td>54</td> <td>69</td> <td>16</td> <td>92</td> <td>33</td> <td>48</td> <td>61</td> <td>43</td> <td>52</td> <td>01</td> <td>89</td> <td>19</td> <td>67</td> <td>48</td>
 </tr>
-</table>
+</table><br>
 
 Произведение этих чисел 26 × 63 × 78 × 14 = 1788696.<br>
 
@@ -100,7 +100,12 @@ $this->title = 'Project Euler Task11';
 
     <div class="body-content">
         <?php 
-            echo 'Сумма всех простых чисел меньше двух миллионов = '.$sum.'.';
+            foreach ($matrix as $val) {
+                for ($i=0; $i <=20 ; $i++) { 
+                    echo $val[$i].'  ';
+                }
+                echo '<br>';
+            }
         ?>
         
 
