@@ -20,7 +20,7 @@ $this->title = 'Project Euler Task11';
 
 
 В таблице 20×20 (внизу) четыре числа на одной диагонали выделены красным.<br><br>
-<table>
+<table style="margin:0 auto;" cellspacing = "5">
 <tr>
     <td>08</td> <td>02</td> <td>22</td> <td>97</td> <td>38</td> <td>15</td> <td>00</td> <td>40</td> <td>00</td> <td>75</td> <td>04</td> <td>05</td> <td>07</td> <td>78</td> <td>52</td> <td>12</td> <td>50</td> <td>77</td> <td>91</td> <td>08</td>
 </tr>
