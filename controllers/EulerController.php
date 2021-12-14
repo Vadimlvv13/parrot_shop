@@ -301,7 +301,7 @@ class EulerController extends Controller
 			for ($j=2; $j < sqrt($i); $j++) {
 				if ($i % $j == 0) {
 					$flag = false;
-					break
+					break;
 				}
 				if ($flag == true) {
 					$sum += $i;
