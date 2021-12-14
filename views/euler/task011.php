@@ -106,6 +106,7 @@ $this->title = 'Project Euler Task11';
                 }
                 echo '<br>';
             }
+            echo '<br><br>'.$test;
         ?>
         
 
