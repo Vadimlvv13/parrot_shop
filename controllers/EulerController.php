@@ -303,11 +303,12 @@ class EulerController extends Controller
 					$flag = false;
 					break;
 				}
-				if ($flag == true) {
+			}
+			if ($flag == true) {
 					$sum += $i;
-				}
 			}
 		}
+		
 
 		return $this->render('task010', [
 			 'sum' => $sum,
