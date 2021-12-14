@@ -296,7 +296,7 @@ class EulerController extends Controller
 	public function actionTask010()
 	{
 		$sum = 2;
-		for ($i=3; $i < 10; $i++) { 
+		for ($i=3; $i < 2000000; $i++) { 
 			$flag = true;
 			for ($j=2; $j <= sqrt($i); $j++) {
 				if ($i % $j == 0) {
@@ -312,6 +312,21 @@ class EulerController extends Controller
 
 		return $this->render('task010', [
 			 'sum' => $sum,
+		]);
+	}
+
+	/**
+   * Project Euler task #11.
+   *
+   * @return mixed
+   */
+	public function actionTask011()
+	{
+		
+		
+
+		return $this->render('task011', [
+			 
 		]);
 	}
 }
