@@ -298,7 +298,7 @@ class EulerController extends Controller
 		$sum = 2;
 		for ($i=3; $i < 10; $i++) { 
 			$flag = true;
-			for ($j=2; $j < sqrt($i); $j++) {
+			for ($j=2; $j <= sqrt($i); $j++) {
 				if ($i % $j == 0) {
 					$flag = false;
 					break;
