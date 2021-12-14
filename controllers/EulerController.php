@@ -345,8 +345,8 @@ class EulerController extends Controller
 			[1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 		];
 		
-		static function add(){
-			echo "123";
+		function add(){
+			return "123";
 		}
 
 		$test = Self::add();
