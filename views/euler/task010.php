@@ -33,7 +33,7 @@ $this->title = 'Project Euler Task10';
 
     <div class="body-content">
         <?php 
-            
+            echo 'Сумма всех простых чисел меньше двух миллионов = '.$sum.'.';
         ?>
         
 

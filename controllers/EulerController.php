@@ -295,10 +295,22 @@ class EulerController extends Controller
    */
 	public function actionTask010()
 	{
-		
+		$sum = 2;
+		for ($i=3; $i < 10; $i++) { 
+			$flag = true;
+			for ($j=2; $j < sqrt($i); $j++) {
+				if ($i % $j == 0) {
+					$flag = false;
+					break
+				}
+				if ($flag == true) {
+					$sum += $i;
+				}
+			}
+		}
 
 		return $this->render('task010', [
-			 
+			 'sum' => $sum,
 		]);
 	}
 }
