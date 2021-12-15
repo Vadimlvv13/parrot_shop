@@ -106,7 +106,13 @@ $this->title = 'Project Euler Task11';
                 }
                 echo '<br>';
             }
-            echo '<br><br>'.$test;
+            echo "<br><br>New matrix:<br><br>"
+            foreach ($test as $val) {
+                for ($i=0; $i <=20 ; $i++) { 
+                    echo $val[$i].'  ';
+                }
+                echo '<br>';
+            }
         ?>
         
 
