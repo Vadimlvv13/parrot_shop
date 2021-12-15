@@ -359,7 +359,7 @@ class EulerController extends Controller
 		//$test = $matrix;
 
 		return $this->render('task011', [
-			 'matrix' => $matrix, 'trans' => $tra,
+			 'matrix' => $matrix, 'trans' => $trans,
 		]);
 	}
 	
