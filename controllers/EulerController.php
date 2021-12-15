@@ -344,11 +344,23 @@ class EulerController extends Controller
 			[20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
 			[1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 		];
-		// Transporation matrix
+		// Транспонирование матрицы
 		for ($i=0; $i < 20; $i++) { 
 			foreach ($matrix as $value) {
 				$trans[$i][] = $value[$i];
 			}
+		}
+		// Отображение матрицы по вертикали
+		function flipmatrix($arr){
+			$j = 0;
+			foreach ($arr as $value) {
+				$c = count($value);
+				for ($i=$c-1; $i >= 0; $i--) { 
+					$res[$j][] = $value[$i];
+				}
+				$j += 1;
+			}
+			return $res;
 		}
 		// Умножение каждых 4 чисел в рядах
 		function multrow($arr){
@@ -364,18 +376,6 @@ class EulerController extends Controller
 				if ($value[0] > $res[0]){
 					$res = [$value[0], $value[1], $value[2], $value[3], $value[4]];
 				}
-			}
-			return $res;
-		}
-		// Отображение матрицы по вертикали
-		function flipmatrix($arr){
-			$j = 0;
-			foreach ($arr as $value) {
-				$c = count($value);
-				for ($i=$c-1; $i >= 0; $i--) { 
-					$res[$j][] = $value[$i];
-				}
-				$j += 1;
 			}
 			return $res;
 		}
@@ -401,13 +401,16 @@ class EulerController extends Controller
 			}
 			return $res;
 		}
-
-		$test = multrow($matrix);
-		$test2 = flipmatrix($matrix);
-		$test3 = multdia($matrix);
+		$flip = flipmatrix($matrix);
+		$mas = [multrow($matrix), multrow($trans), multdia($matrix), multdia($flip)];
+		foreach ($mas as $value) {
+			if ($value[0] > $result[0]) {
+				$result = [$value[0], $value[1], $value[2], $value[3], $value[4]];
+			}
+		}
 
 		return $this->render('task011', [
-			 'matrix' => $matrix, 'trans' => $trans, 'test' => $test, 'test2' => $test2, 'test3' => $test3,
+			 'mas' => $mas, 'result' => $result,
 		]);
 	}
 	

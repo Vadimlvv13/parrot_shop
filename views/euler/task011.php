@@ -100,29 +100,14 @@ $this->title = 'Project Euler Task11';
 
     <div class="body-content">
         <?php 
-            foreach ($matrix as $val) {
-                for ($i=0; $i <=20 ; $i++) { 
-                    echo $val[$i].'  ';
+            foreach ($mas as $val) {
+                for ($i=0; $i < 4 ; $i++) { 
+                    $val[0].' = '.$val[1].' x '.$val[2].' x '.$val[3].' x '.$val[4].'.';
                 }
                 echo '<br>';
             }
-            echo "<br><br>New matrix:<br><br>";
-            foreach ($trans as $val) {
-                for ($i=0; $i <=20 ; $i++) { 
-                    echo $val[$i].'  ';
-                }
-                echo '<br>';
-            }
-            echo '<br>'.$test[0].' = '.$test[1].' x '.$test[2].' x '.$test[3].' x '.$test[4].'.';
-
-            echo "<br><br>Flip Matrix:<br><br>";
-            foreach ($test2 as $val) {
-                for ($i=0; $i <=20 ; $i++) { 
-                    echo $val[$i].'  ';
-                }
-                echo '<br>';
-            }
-            echo '<br>Result Diagonal: '.$test3[0].' = '.$test3[1].' x '.$test3[2].' x '.$test3[3].' x '.$test3[4].'.';
+            
+            echo '<br>Result: '.$result[0].' = '.$result[1].' x '.$result[2].' x '.$result[3].' x '.$result[4].'.';
 
         ?>
         
