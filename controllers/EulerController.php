@@ -346,10 +346,8 @@ class EulerController extends Controller
 		];
 		for ($i=0; $i < 20; $i++) { 
 			foreach ($matrix as $value) {
-				$temp[] = $value[$i];
+				$trans[$i] = $value[$i];
 			}
-			$trans[] = [$temp];
-			$temp = NULL;
 		}
 		
 		/*function matrix($arr){
