@@ -397,7 +397,7 @@ class EulerController extends Controller
 				}
 			}
 			else{
-				$res[] = "Error! Small matrix!"
+				$res[] = "Error! Small matrix!";
 			}
 			return $res;
 		}
