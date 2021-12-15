@@ -100,15 +100,7 @@ $this->title = 'Project Euler Task11';
 
     <div class="body-content">
         <?php 
-            foreach ($mas as $val) {
-                for ($i=0; $i < 4 ; $i++) { 
-                    $val[0].' = '.$val[1].' x '.$val[2].' x '.$val[3].' x '.$val[4].'.';
-                }
-                echo '<br>';
-            }
-            
-            echo '<br>Result: '.$result[0].' = '.$result[1].' x '.$result[2].' x '.$result[3].' x '.$result[4].'.';
-
+            echo 'Наибольшее произведение четырех подряд идущих чисел в таблице 20×20, расположенных в любом направлении равно '.$result[0].' = '.$result[1].' x '.$result[2].' x '.$result[3].' x '.$result[4].'.';
         ?>
         
 
