@@ -346,12 +346,10 @@ class EulerController extends Controller
 		];
 		for ($i=0; $i < 20; $i++) { 
 			foreach ($matrix as $value) {
-				
-					$temp[] = $value[$i];
-				
-				$trans[] = $temp;
-				$temp = NULL;
+				$temp[] = $value[$i];
 			}
+			$trans[] = $temp;
+			$temp = NULL;
 		}
 		
 		/*function matrix($arr){
@@ -362,7 +360,7 @@ class EulerController extends Controller
 		//$test = $matrix;
 
 		return $this->render('task011', [
-			 'matrix' => $matrix, 'trans' => $trans,
+			 'matrix' => $matrix, 'trans' => $tra,
 		]);
 	}
 	
