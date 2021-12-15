@@ -344,13 +344,14 @@ class EulerController extends Controller
 			[20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
 			[1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 		];
+		// Transporation matrix
 		for ($i=0; $i < 20; $i++) { 
 			foreach ($matrix as $value) {
 				$trans[$i][] = $value[$i];
 			}
 		}
-		
-		function matrix($arr){
+		// Умножение каждых 4 чисел в рядах
+		function transp($arr){
 			foreach ($arr as $val) {
 				$i = 0;
 				while (isset($val[$i+3])){
@@ -366,11 +367,24 @@ class EulerController extends Controller
 			}
 			return $res;
 		}
+		// Отображение матрицы по вертикали
+		function flipmatrix($arr){
+			$j = 0;
+			foreach ($arr as $value) {
+				$c = count($value);
+				for ($i=$c-1; $i >= 0; $i--) { 
+					$res[$j][] = $value[$i];
+				}
+				$j += 1;
+			}
+			return $res;
+		}
 
-		$test = matrix($matrix);
+		$test = transp($matrix);
+		$test2 = flipmatrix($matrix);
 
 		return $this->render('task011', [
-			 'matrix' => $matrix, 'trans' => $trans, 'test' => $test,
+			 'matrix' => $matrix, 'trans' => $trans, 'test' => $test, 'test2' => $test2,
 		]);
 	}
 	

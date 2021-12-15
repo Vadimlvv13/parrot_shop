@@ -114,6 +114,14 @@ $this->title = 'Project Euler Task11';
                 echo '<br>';
             }
             echo '<br>'.$test[0].' = '.$test[1].' x '.$test[2].' x '.$test[3].' x '.$test[4].'.';
+
+            echo "<br><br>Flip Matrix:<br><br>";
+            foreach ($test2 as $val) {
+                for ($i=0; $i <=20 ; $i++) { 
+                    echo $val[$i].'  ';
+                }
+                echo '<br>';
+            }
         ?>
         
 
