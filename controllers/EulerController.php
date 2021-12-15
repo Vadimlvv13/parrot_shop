@@ -356,6 +356,7 @@ class EulerController extends Controller
 				while (isset($val[$i+3])){
 					$z = $val[$i]*$val[$i+1]*$val[$i+2]*$val[$i+3];
 					$mas[] = [$z, $val[$i], $val[$i+1], $val[$i+2], $val[$i+3]];
+					$i += 1;
 				}
 			}
 			foreach ($mas as $value) {
