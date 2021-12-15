@@ -351,7 +351,7 @@ class EulerController extends Controller
 			}
 		}
 		// Умножение каждых 4 чисел в рядах
-		function transp($arr){
+		function multrow($arr){
 			foreach ($arr as $val) {
 				$i = 0;
 				while (isset($val[$i+3])){
@@ -379,12 +379,35 @@ class EulerController extends Controller
 			}
 			return $res;
 		}
+		// Умножение каждых 4 чисел по диагонали
+		function multdia($arr){
+			$rows = count($arr);
+			$col = count($arr[0]);
+			if ($row >= 4 && $col >= 4){
+				for ($i=0; $i < $row-3; $i++) { 
+					for ($j=0; $j < $col-3; $j++) {
+						$z = $arr[$i][$j]*$arr[$i+1][$j+1]*$arr[$i+2][$j+2]*$arr[$i+3][$j+3];
+						$mas[] = [$z, $arr[$i][$j], $arr[$i+1][$j+1], $arr[$i+2][$j+2], $arr[$i+3][$j+3]];
+					}
+				}
+				foreach ($mas as $val) {
+					if ($val[0] > $res[0]) {
+						$res = [$val[0], $val[1], $val[2], $val[3], $val[4]];
+					}
+				}
+			}
+			else{
+				$res[] = "Error! Small matrix!"
+			}
+			return $res;
+		}
 
-		$test = transp($matrix);
+		$test = multrow($matrix);
 		$test2 = flipmatrix($matrix);
+		$test3 = multdia($matrix);
 
 		return $this->render('task011', [
-			 'matrix' => $matrix, 'trans' => $trans, 'test' => $test, 'test2' => $test2,
+			 'matrix' => $matrix, 'trans' => $trans, 'test' => $test, 'test2' => $test2, 'test3' => $test3,
 		]);
 	}
 	
