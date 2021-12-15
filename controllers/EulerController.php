@@ -361,7 +361,7 @@ class EulerController extends Controller
 			}
 			foreach ($mas as $value) {
 				if ($value[0] > $res[0]){
-					$res = [$value[0], $value[1], $value[2], $value[3]];
+					$res = [$value[0], $value[1], $value[2], $value[3], $value[4]];
 				}
 			}
 			return $res;
