@@ -348,7 +348,7 @@ class EulerController extends Controller
 			foreach ($matrix as $value) {
 				$temp[] = $value[$i];
 			}
-			$trans[] = $temp;
+			$trans[] = [$temp];
 			$temp = NULL;
 		}
 		
