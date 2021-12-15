@@ -113,7 +113,7 @@ $this->title = 'Project Euler Task11';
                 }
                 echo '<br>';
             }*/
-            var_dump($trans);
+            echo $trans;
         ?>
         
 
