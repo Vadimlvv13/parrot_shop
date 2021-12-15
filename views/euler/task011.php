@@ -113,7 +113,7 @@ $this->title = 'Project Euler Task11';
                 }
                 echo '<br>';
             }
-            echo '<br>'.$test[0].' = '.$test[1].' x '.$test[2].' x '.$test[3].'.';
+            echo '<br>'.$test[0].' = '.$test[1].' x '.$test[2].' x '.$test[3].' x '.$test[4].'.';
         ?>
         
 
