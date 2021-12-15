@@ -122,7 +122,7 @@ $this->title = 'Project Euler Task11';
                 }
                 echo '<br>';
             }
-            echo '<br>Result Diagonal: '.$test[0].' = '.$test[1].' x '.$test[2].' x '.$test[3].' x '.$test[4].'.';
+            echo '<br>Result Diagonal: '.$test3[0].' = '.$test3[1].' x '.$test3[2].' x '.$test3[3].' x '.$test3[4].'.';
 
         ?>
         
