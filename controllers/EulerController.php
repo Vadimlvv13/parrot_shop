@@ -350,15 +350,26 @@ class EulerController extends Controller
 			}
 		}
 		
-		/*function matrix($arr){
-
+		function matrix($arr){
+			foreach ($arr as $val) {
+				$i = 0;
+				while (isset($val[$i+3])){
+					$z = $val[$i]*$val[$i+1]*$val[$i+2]*$val[$i+3];
+					$mas[] = [$z, $val[$i], $val[$i+1], $val[$i+2], $val[$i+3]];
+				}
+			}
+			foreach ($mas as $value) {
+				if ($value[0] > $res[0]){
+					$res = [$value[0], $value[1], $value[2], $value[3]]
+				}
+			}
 			return $res;
-		}*/
+		}
 
-		//$test = $matrix;
+		$test = matrix($matrix);
 
 		return $this->render('task011', [
-			 'matrix' => $matrix, 'trans' => $trans,
+			 'matrix' => $matrix, 'trans' => $trans, 'test' => $test,
 		]);
 	}
 	
