@@ -423,10 +423,10 @@ class EulerController extends Controller
 	{
 		$i = 0;
 		while ($result == NULL){
-			$count = 1;
+			$count = 2;
 			$i += 1;
 			$num += $i;
-			for ($j=1; $j <= $num/2; $j++) { 
+			for ($j=2; $j <= $num/2; $j++) { 
 				if ($num % $j == 0) {
 					$count += 1;
 				}
