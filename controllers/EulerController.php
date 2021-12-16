@@ -423,15 +423,15 @@ class EulerController extends Controller
 	{
 		$i = 0;
 		while ($result == NULL){
-			$count = 0;
+			$count = 1;
 			$i += 1;
 			$num += $i;
-			for ($j=1; $j <= $num; $j++) { 
+			for ($j=1; $j <= $num/2; $j++) { 
 				if ($num % $j == 0) {
 					$count += 1;
 				}
 			}
-			if ($count > 500) {
+			if ($count > 5) {
 				$result = $num;
 			}
 		}
