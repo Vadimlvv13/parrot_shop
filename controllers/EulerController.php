@@ -421,11 +421,24 @@ class EulerController extends Controller
    */
 	public function actionTask012()
 	{
-		
+		$i = 0;
+		while ($result == NULL){
+			$count = 0;
+			$i += 1;
+			$num += $i;
+			for ($j=1; $j <= $num; $j++) { 
+				if ($num % $j == 0) {
+					$count += 1;
+				}
+			}
+			if ($count > 5) {
+				$result = $num;
+			}
+		}
 		
 
 		return $this->render('task012', [
-			
+			'result' => $result,
 		]);
 	}
 }

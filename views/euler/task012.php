@@ -40,7 +40,7 @@ $this->title = 'Project Euler Task12';
 
     <div class="body-content">
         <?php 
-            
+            echo 'Первое треугольное число, у которого более пятисот делителей - '.$result.'.';
         ?>
         
 
