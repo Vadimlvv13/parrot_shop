@@ -431,7 +431,7 @@ class EulerController extends Controller
 					$count += 1;
 				}
 			}
-			if ($count > 5) {
+			if ($count > 8) {
 				$result = $num;
 			}
 		}
