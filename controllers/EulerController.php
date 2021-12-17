@@ -428,7 +428,7 @@ class EulerController extends Controller
 				for ($i; $i <= $int; $i++) { 
 					if ($int % $i == 0) {
 						if ($z == 0){
-							
+
 						}
 					}
 					$z += 1;
@@ -437,21 +437,20 @@ class EulerController extends Controller
 		}
 
 		$i = 1;
-		while ($result == NULL){
-			//$count = 2;
+		do{
 			$i += 1;
 			$num += $i;
 
-			for ($j=2; $j <= $num/2; $j++) { 
+			/*for ($j=2; $j <= $num/2; $j++) { 
 				if ($num % $j == 0) {
 					$count += 1;
 				}
-			}
+			}*/
 
-			if ($count > 5) {
+			if (dividers($num) > 5) {
 				$result = $num;
 			}
-		}
+		}while ($result == NULL);
 		
 
 		return $this->render('task012', [
