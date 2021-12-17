@@ -436,9 +436,10 @@ class EulerController extends Controller
 				if ($val == $a) {
 					$mult[$key-1-$b] += 1;
 					$b += 1;
+				}else{
+					$mult[$key-$b] = 2;
 				}
 				$a = $val;
-				$mult[$key-$b] = 2;
 			}
 			$res = 1;
 			foreach ($mult as $val) {
