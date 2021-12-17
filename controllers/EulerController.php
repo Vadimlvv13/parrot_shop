@@ -422,33 +422,35 @@ class EulerController extends Controller
 	public function actionTask012()
 	{
 		function dividers($int){
-			$i = 2;
-			do{
-				for ($i; $i <= $int; $i++) { 
-					if ($int % $i == 0) {
-						$int /= $i;
-						$div[] = $i;
-						break;
+			if ($int < 2) $res = 1;
+			else{
+				$i = 2;
+				do{
+					for ($i; $i <= $int; $i++) { 
+						if ($int % $i == 0) {
+							$int /= $i;
+							$div[] = $i;
+							break;
+						}
 					}
+				}while($int != 1);
+				foreach ($div as $key => $val) {
+					if ($val == $a) {
+						$mult[$key-1-$b] += 1;
+						$b += 1;
+					}else{
+						$mult[$key-$b] = 2;
+					}
+					$a = $val;
 				}
-			}while($int != 1);
-			foreach ($div as $key => $val) {
-				if ($val == $a) {
-					$mult[$key-1-$b] += 1;
-					$b += 1;
-				}else{
-					$mult[$key-$b] = 2;
+				$res = 1;
+				foreach ($mult as $val) {
+					$res *= $val;
 				}
-				$a = $val;
-			}
-			$res = 1;
-			foreach ($mult as $val) {
-				$res *= $val;
 			}
 			return $res;
 		}
 
-		$i = 2;
 		do{
 			$i += 1;
 			$num += $i;
