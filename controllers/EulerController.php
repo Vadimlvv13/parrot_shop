@@ -454,14 +454,7 @@ class EulerController extends Controller
 		do{
 			$i += 1;
 			$num += $i;
-
-			/*for ($j=2; $j <= $num/2; $j++) { 
-				if ($num % $j == 0) {
-					$count += 1;
-				}
-			}*/
-
-			if (dividers($num) > 5) {
+			if (dividers($num) > 3) {
 				$result = $num;
 			}
 		}while ($result == NULL);
