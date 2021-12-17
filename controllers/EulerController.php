@@ -421,17 +421,34 @@ class EulerController extends Controller
    */
 	public function actionTask012()
 	{
-		$i = 0;
+		function dividers($int){
+			$i = 2;
+			do{
+				$z = 0;
+				for ($i; $i <= $int; $i++) { 
+					if ($int % $i == 0) {
+						if ($z == 0){
+							
+						}
+					}
+					$z += 1;
+				}
+			}while();
+		}
+
+		$i = 1;
 		while ($result == NULL){
-			$count = 2;
+			//$count = 2;
 			$i += 1;
 			$num += $i;
+
 			for ($j=2; $j <= $num/2; $j++) { 
 				if ($num % $j == 0) {
 					$count += 1;
 				}
 			}
-			if ($count > 500) {
+
+			if ($count > 5) {
 				$result = $num;
 			}
 		}
