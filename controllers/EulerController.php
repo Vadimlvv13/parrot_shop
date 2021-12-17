@@ -424,16 +424,15 @@ class EulerController extends Controller
 		function dividers($int){
 			$i = 2;
 			do{
-				$z = 0;
 				for ($i; $i <= $int; $i++) { 
 					if ($int % $i == 0) {
-						if ($z == 0){
-
-						}
+						$int /= $i;
+						$div[] = $i;
 					}
-					$z += 1;
 				}
-			}while();
+			}while($int != 1);
+			
+			return $res;
 		}
 
 		$i = 1;
