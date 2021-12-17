@@ -428,6 +428,7 @@ class EulerController extends Controller
 					if ($int % $i == 0) {
 						$int /= $i;
 						$div[] = $i;
+						break;
 					}
 				}
 			}while($int != 1);
