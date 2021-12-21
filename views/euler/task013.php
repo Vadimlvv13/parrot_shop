@@ -129,9 +129,10 @@ $this->title = 'Project Euler Task13';
 
     <div class="body-content">
         <?php 
-            foreach ($mas as $value) {
+            /*foreach ($mas as $value) {
                 echo $value.'<br>';
-            }
+            }*/
+            echo 'Первые десять цифр суммы - '.$result;
         ?>
         
 

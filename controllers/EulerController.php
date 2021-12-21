@@ -574,9 +574,17 @@ class EulerController extends Controller
 			20849603980134001723930671666823555245252804609722,
 			53503534226472524250874054075591789781264330331690
 		];
+		foreach ($mas as $val) {
+			$sum += $val;
+		}
+		$res = strval($sum);
+		for ($i=0; $i < 10; $i++) { 
+			$word[] = $res[$i];
+		}
+		$result = intval($word);
 
 		return $this->render('task013', [
-			'mas' => $mas,
+			'result' => $result,
 		]);
 	}
 }
