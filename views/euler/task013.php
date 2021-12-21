@@ -129,7 +129,9 @@ $this->title = 'Project Euler Task13';
 
     <div class="body-content">
         <?php 
-            
+            foreach ($mas as $value) {
+                echo $value.'<br>';
+            }
         ?>
         
 
