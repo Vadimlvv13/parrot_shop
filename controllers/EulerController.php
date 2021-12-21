@@ -578,10 +578,7 @@ class EulerController extends Controller
 			$sum += $val;
 		}
 		$res = strval($sum);
-		for ($i=0; $i < 10; $i++) { 
-			$word[] = $res[$i];
-		}
-		$result = intval($word);
+		$result = intval(substr($res, 0, 10));
 
 		return $this->render('task013', [
 			'result' => $result,
