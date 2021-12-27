@@ -599,7 +599,7 @@ class EulerController extends Controller
 			return $sum;
 		}
 		$mas1 = ['1234567', '1234567', '1234567'];
-		$res = SumOfNumbers($mas1);
+		$res = SumOfNumbers($mas);
 		$result = intval(substr($res, 0, 10));
 
 		return $this->render('task013', [
