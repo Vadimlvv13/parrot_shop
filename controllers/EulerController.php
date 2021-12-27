@@ -612,7 +612,7 @@ class EulerController extends Controller
    *
    * @return mixed
    */
-	public function actionTask012()
+	public function actionTask014()
 	{
 		
 		
