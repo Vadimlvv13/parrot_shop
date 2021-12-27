@@ -596,7 +596,7 @@ class EulerController extends Controller
 			$sum = $result;
 			$result = '';
 			}
-			return $result;
+			return $sum;
 		}
 		$mas1 = ['1234567', '1234567', '1234567'];
 		$res = SumOfNumbers($mas1);
