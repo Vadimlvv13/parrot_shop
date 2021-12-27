@@ -594,10 +594,11 @@ class EulerController extends Controller
 					$result = '1'.$result;
 				}
 			$sum = $result;
+			$result = '';
 			}
 			return $result;
 		}
-		$mas1 = ['1234567', '1234567'];
+		$mas1 = ['1234567', '1234567', '1234567'];
 		$res = SumOfNumbers($mas1);
 		$result = intval(substr($res, 0, 10));
 
