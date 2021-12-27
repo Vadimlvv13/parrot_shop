@@ -574,14 +574,29 @@ class EulerController extends Controller
 			'20849603980134001723930671666823555245252804609722',
 			'53503534226472524250874054075591789781264330331690'
 		];
-		foreach ($mas as $val) {
-			$sum += $val;
+		function SumOfNumbers($array){
+			foreach ($array as $val) {
+				$len = max(strlen($sum), strlen($val));
+				$num1 = str_pad($sum, $len, "0", STR_PAD_LEFT);
+				$num2 = str_pad($val, $len, "0", STR_PAD_LEFT);
+				for ($i=$len-1; $i >= 0; $i--) { 
+					$num3 = intval($num1[$i])+intval($num2[$i])+$temp;
+					$temp = 0;
+					if ($num3 > 9) {
+						$temp = 1;
+						$num3 -= 10;
+					}
+					$sum = strval($num3).$sum;
+				}
+			}
+			return $sum;
 		}
-		$res = strval($sum);
+		$mas1 = ['1234567', '1234567', '1234567'];
+		$res = SumOfNumbers($mas1);
 		$result = intval(substr($res, 0, 10));
 
 		return $this->render('task013', [
-			'result' => $result,
+			'result' => $result, 'res' => $res,
 		]);
 	}
 }

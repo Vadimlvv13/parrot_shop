@@ -133,6 +133,7 @@ $this->title = 'Project Euler Task13';
                 echo $value.'<br>';
             }*/
             echo 'Первые десять цифр суммы - '.$result;
+            echo '<br><br>'.$res;
         ?>
         
 
