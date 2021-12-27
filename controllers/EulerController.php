@@ -588,6 +588,9 @@ class EulerController extends Controller
 					}
 					$sum = strval($num3).$sum;
 				}
+				if ($temp == 1) {
+					$sum = "1".$sum;
+				}
 			}
 			return $sum;
 		}
