@@ -96,7 +96,7 @@ $this->title = 'Project Euler Tasks List';
             <a href="/web/euler/task012">Задача №12<a>
             <br>
             <p>Треугольное число с большим количеством делителей.</p>
-            <!-- <h5 style="color: green;">Выполнено</h5> -->
+            <h5 style="color: green;">Выполнено</h5>
         </div>
 
         <div class="jumbotron">
