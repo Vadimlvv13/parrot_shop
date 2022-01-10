@@ -625,7 +625,7 @@ class EulerController extends Controller
 				}
 				$count += 1;
 			}
-			$mas[] = $i => $count;
+			$mas[$i] = $count;
 		}
 		
 
