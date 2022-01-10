@@ -614,7 +614,7 @@ class EulerController extends Controller
    */
 	public function actionTask014()
 	{
-		for ($i=1; $i < 11; $i++) { 
+		for ($i=1; $i < 1000000; $i++) { 
 			$num = $i;
 			$count = 1;
 			while ($num !== 1) {
