@@ -614,11 +614,23 @@ class EulerController extends Controller
    */
 	public function actionTask014()
 	{
-		
+		for ($i=1; $i < 11; $i++) { 
+			$num = $i;
+			$count = 1;
+			while ($num !== 1) {
+				if ($num % 2 == 0) {
+					$num /= 2;
+				}else{
+					$num = 3 * $num + 1;
+				}
+				$count += 1;
+			}
+			$mas[] = $i => $count;
+		}
 		
 
 		return $this->render('task014', [
-			
+			'mas' => $mas,
 		]);
 	}
 }
