@@ -44,7 +44,7 @@ n → 3n + 1 (n - нечетное)<br><br>
                     $num = $key;
                 }
             }
-            echo "Число $num имеет $i чисел.<br>"
+            echo "Число $num имеет $i чисел.<br>";
             foreach ($mas as $key => $value) {
                 echo "$key = $value<br>";
             }
