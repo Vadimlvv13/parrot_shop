@@ -37,7 +37,7 @@ n → 3n + 1 (n - нечетное)<br><br>
 
     <div class="body-content">
         <?php 
-            foreach ($mas as $key = > $value) {
+            foreach ($mas as $key => $value) {
                 echo "$key = $value<br>";
             }
         ?>
