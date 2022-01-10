@@ -618,6 +618,9 @@ class EulerController extends Controller
 			$num = $i;
 			$count = 1;
 			while ($num !== 1) {
+				/*foreach ($mas as $key => $value) {
+					// code...
+				}*/
 				if ($num % 2 == 0) {
 					$num /= 2;
 				}else{

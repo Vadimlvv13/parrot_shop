@@ -37,6 +37,14 @@ n → 3n + 1 (n - нечетное)<br><br>
 
     <div class="body-content">
         <?php 
+            $i = 0;
+            foreach ($mas as $key => $value) {
+                if ($value >= $i){
+                    $i = $value;
+                    $num = $key;
+                }
+            }
+            echo "Число $num имеет $i чисел.<br>"
             foreach ($mas as $key => $value) {
                 echo "$key = $value<br>";
             }
