@@ -643,8 +643,8 @@ class EulerController extends Controller
 	{
 		$m = 3;
 		$n = 3;
-		$res = (gmp_fact(($m-1)+($n-1)))/(gmp_fact($m-1)*gmp_fact($n-1));
-		
+		//$res = (gmp_fact(($m-1)+($n-1)))/(gmp_fact($m-1)*gmp_fact($n-1));
+		$res = gmp_fact($m);
 
 		return $this->render('task015', [
 			'res' => $res,
