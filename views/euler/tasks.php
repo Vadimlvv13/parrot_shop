@@ -117,7 +117,7 @@ $this->title = 'Project Euler Tasks List';
             <a href="/web/euler/task015">Задача №15<a>
             <br>
             <p>Пути через таблицу.</p>
-            <!-- <h5 style="color: green;">Выполнено</h5> -->
+            <h5 style="color: green;">Выполнено</h5>
         </div>
 
         <div class="jumbotron">

@@ -641,8 +641,8 @@ class EulerController extends Controller
    */
 	public function actionTask015()
 	{
-		$m = 4;
-		$n = 3;
+		$m = 20;
+		$n = 20;
 		function factorial($a){
 			if ($a > 1) {
 				$result = 1;
@@ -652,8 +652,7 @@ class EulerController extends Controller
 			}
 			return $result;
 		}
-		$res = (factorial(($m)+($n)))/(factorial($m)*factorial($n));
-		/*$res = factorial($m);*/
+		$res = (factorial(($m)+($n)))/(factorial($m)*factorial($n)); // Формула комбинаторики.
 
 		return $this->render('task015', [
 			'res' => $res,
