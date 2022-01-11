@@ -641,8 +641,8 @@ class EulerController extends Controller
    */
 	public function actionTask015()
 	{
-		$m = 3;
-		$n = 3;
+		$m = 2;
+		$n = 2;
 		function factorial($a){
 			if ($a > 1) {
 				$result = 1;
@@ -652,7 +652,7 @@ class EulerController extends Controller
 			}
 			return $result;
 		}
-		$res = (factorial(($m-1)+($n-1)))/(factorial($m-1)*factorial($n-1));
+		$res = (factorial(($m)+($n)))/(factorial($m)*factorial($n));
 		/*$res = factorial($m);*/
 
 		return $this->render('task015', [
