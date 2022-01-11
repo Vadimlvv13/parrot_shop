@@ -29,7 +29,7 @@ $this->title = 'Project Euler Task15';
 
     <div class="body-content">
         <?php 
-            
+            echo "Количество машрутов в сетке 20х20 = $res."
         ?>
         
 
