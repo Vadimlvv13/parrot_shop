@@ -645,11 +645,10 @@ class EulerController extends Controller
 		$n = 3;
 		function factorial($a){
 			if ($a > 1) {
+				$result = 1;
 				for ($i=1; $i <= $a; $i++) { 
 					$result *= $i;
 				}
-			}else{
-				$result = 1;
 			}
 			return $result;
 		}
