@@ -652,8 +652,8 @@ class EulerController extends Controller
 			}
 			return $result;
 		}
-		//$res = (gmp_fact(($m-1)+($n-1)))/(gmp_fact($m-1)*gmp_fact($n-1));
-		$res = factorial($m);
+		$res = (factorial(($m-1)+($n-1)))/(factorial($m-1)*factorial($n-1));
+		/*$res = factorial($m);*/
 
 		return $this->render('task015', [
 			'res' => $res,
