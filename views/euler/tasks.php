@@ -110,7 +110,7 @@ $this->title = 'Project Euler Tasks List';
             <a href="/web/euler/task014">Задача №14<a>
             <br>
             <p>Самая длинная последовательность Коллатца.</p>
-            <!-- <h5 style="color: green;">Выполнено</h5> -->
+            <h5 style="color: green;">Выполнено</h5>
         </div>
 
         <div class="jumbotron">
