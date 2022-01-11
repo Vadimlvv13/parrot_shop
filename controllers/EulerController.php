@@ -641,8 +641,8 @@ class EulerController extends Controller
    */
 	public function actionTask015()
 	{
-		$m = 2;
-		$n = 2;
+		$m = 4;
+		$n = 3;
 		function factorial($a){
 			if ($a > 1) {
 				$result = 1;
