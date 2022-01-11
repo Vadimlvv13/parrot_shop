@@ -618,13 +618,12 @@ class EulerController extends Controller
 			$num = $i;
 			$count = 1;
 			while ($num !== 1) {
-				/*foreach ($mas as $key => $value) {
-					if ($num == $key) {
+				foreach ($mas as $key => $value) {
+					if ($mas isset && $num == $key) {
 						$count += $value;
 						$num = 1;
-						break;
 					}
-				}*/
+				}
 				if ($num !== 1){
 					if ($num % 2 == 0) {
 						$num /= 2;
