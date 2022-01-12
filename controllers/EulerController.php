@@ -643,15 +643,15 @@ class EulerController extends Controller
 	public function actionTask015()
 	{
 		$model = new NumbersForm();
-		if ($model->load(Yii::$app->request->post()) {
+		/*if ($model->load(Yii::$app->request->post())) {
 			if ($model->validate()){
 				Yii::$app->session->setFlash('success', 'Данные приняты');
 			}else{
 				Yii::$app->session->setFlash('error', 'Ошибка');
 			}
-		}
-		$m = 20;
-		$n = 20;
+		}*/
+		$m = $request->post('number1');
+		$n = $request->post('number2');
 		function factorial($a){
 			if ($a > 1) {
 				$result = 1;
