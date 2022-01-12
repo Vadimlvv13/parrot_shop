@@ -1,6 +1,9 @@
 <?php
 
 /* @var $this yii\web\View */
+    use yii\helpers\Html;
+    use yii\widgets\ActiveForm;
+    use app\controllers\EulerController;
 
 $this->title = 'Project Euler Task15';
 ?>
@@ -20,8 +23,11 @@ $this->title = 'Project Euler Task15';
 
 Сколько существует таких маршрутов в сетке 20×20?
 
-
-
+<?php $form = ActiveForm::begin() ?>
+<?= $form->field($model, 'number1') ?>
+<?= $form->field($model, 'number2') ?>
+<?= Html::submitButton('Задать размер сетки', ['class' => 'btn btn-success']) ?>
+<?php ActiveForm::end() ?>
 
 </p>
 
@@ -29,7 +35,7 @@ $this->title = 'Project Euler Task15';
 
     <div class="body-content">
         <?php 
-            echo "Количество машрутов в сетке 20х20 = $res."
+            echo "Количество маршрутов в сетке 20х20 = $res."
         ?>
         
 

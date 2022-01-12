@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\NumbersForm;
 
 class EulerController extends Controller
 {
@@ -641,6 +642,7 @@ class EulerController extends Controller
    */
 	public function actionTask015()
 	{
+		$model = new NumbersForm();
 		$m = 20;
 		$n = 20;
 		function factorial($a){
@@ -655,7 +657,7 @@ class EulerController extends Controller
 		$res = (factorial(($m)+($n)))/(factorial($m)*factorial($n)); // Формула комбинаторики.
 
 		return $this->render('task015', [
-			'res' => $res,
+			'res' => $res, 'model' => $model,
 		]);
 	}
 }
