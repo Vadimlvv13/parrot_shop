@@ -26,9 +26,6 @@ class NumbersForm extends Model
 		];
 	}
 
-	function __construct(argument)
-	{
-		// code...
-	}
+	
 }
 ?>
