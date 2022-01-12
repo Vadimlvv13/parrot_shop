@@ -643,6 +643,10 @@ class EulerController extends Controller
 	public function actionTask015()
 	{
 		$model = new NumbersForm();
+		if ($model->load(Yii::$app->request->post()) {
+			debug(Yii::$app->request->post());
+			die;
+		}
 		$m = 20;
 		$n = 20;
 		function factorial($a){
