@@ -652,6 +652,10 @@ class EulerController extends Controller
 		}*/
 		$m = intval($request->post('number1'));
 		$n = intval($request->post('number2'));
+		if ($m || $n == null) {
+			$n = 20;
+			$m = 20;
+		}
 		function factorial($a){
 			if ($a > 1) {
 				$result = 1;
