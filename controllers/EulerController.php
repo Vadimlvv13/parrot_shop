@@ -644,8 +644,11 @@ class EulerController extends Controller
 	{
 		$model = new NumbersForm();
 		if ($model->load(Yii::$app->request->post()) {
-			debug(Yii::$app->request->post());
-			die;
+			if ($model->validate()){
+				Yii::$app->session->setFlash('success', 'Данные приняты');
+			}else{
+				Yii::$app->session->setFlash('error', 'Ошибка');
+			}
 		}
 		$m = 20;
 		$n = 20;
