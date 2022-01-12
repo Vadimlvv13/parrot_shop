@@ -650,8 +650,8 @@ class EulerController extends Controller
 				Yii::$app->session->setFlash('error', 'Ошибка');
 			}
 		}*/
-		$m = $request->post('number1');
-		$n = $request->post('number2');
+		$m = intval($request->post('number1'));
+		$n = intval($request->post('number2'));
 		function factorial($a){
 			if ($a > 1) {
 				$result = 1;
