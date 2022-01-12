@@ -17,7 +17,7 @@ class NumbersForm extends Model
 		return [
 			'number1' => 'Высота сетки',
 			'number2' => 'Шырина сетки',
-		]
+		];
 	}
 
 	public function rules(){
