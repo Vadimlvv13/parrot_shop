@@ -23,11 +23,11 @@ $this->title = 'Project Euler Task15';
 
 Сколько существует таких маршрутов в сетке 20×20?
 
-<?php $form = ActiveForm::begin() ?>
+<!-- <?php $form = ActiveForm::begin() ?>
 <?= $form->field($model, 'number1') ?>
 <?= $form->field($model, 'number2') ?>
 <?= Html::submitButton('Задать размер сетки', ['class' => 'btn btn-success']) ?>
-<?php ActiveForm::end() ?>
+<?php ActiveForm::end() ?> -->
 
 </p>
 
