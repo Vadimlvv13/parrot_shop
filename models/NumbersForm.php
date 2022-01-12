@@ -22,7 +22,7 @@ class NumbersForm extends Model
 
 	public function rules(){
 		return [
-			[ ['number1', 'number2'], 'integer', 'max' => 3, 'tooLong' => 'Слишком большое значение' ],
+			[ ['number1', 'number2'], 'string', 'max' => 3, 'tooLong' => 'Слишком большое значение' ],
 		];
 	}
 
