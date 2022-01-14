@@ -12,6 +12,8 @@ use app\models\ContactForm;
 
 class MyCarsController extends Controller
 {
+    public $layout = 'site';
+
     /**
      * {@inheritdoc}
      */
