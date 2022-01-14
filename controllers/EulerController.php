@@ -681,9 +681,10 @@ class EulerController extends Controller
 	{
 		$num = 2; // число которое возводим в степень.
 		$n = 15; // степень на которую мы возводим число.
-		for ($i=1; $i < $n; $i++) { 
+		$res = strval($num);
+		/*for ($i=1; $i < $n; $i++) { 
 			
-		}
+		}*/
 
 		return $this->render('task016', [
 			'res' => $res,
