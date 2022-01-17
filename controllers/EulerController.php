@@ -684,52 +684,60 @@ class EulerController extends Controller
 		$res = strval($num);
 		public function Multiplication($a, $b) // произведение двух чисел $a и $b.
 		{
-			$temp = 0;
-			$count = 0;
-			$A = strval($a);
-			$B = strval($b);
-			$lenA = strlen($a);
-			$lenB = strlen($b);
-			for ($i = $lenB; $i > 0; $i--) {
-				for ($j = $lenA; $j > 0; $j--) { 
-					$mult = (intval($A[$j])+$temp) * intval($B[$i]);
-					if ($mult > 9) {
-						$temp = $mult[0];
-						$mult = $mult[1];
-						$c[$count] = strval($mult).$c[$count];
-					}else{
-						$temp = 0;
-						$c[$count] = $mult.$c[$count];
-					}
-				}
-				if ($count > 0) {
-					$lenC = strlen($c[$count])+$count;
-					$c[$count] = str_pad($c[$count], $lenC, "0", STR_PAD_RIGHT);
-				}
-				if ($j == 1 && $temp !== 0) {
-					$c[$count] = strval($temp).$c[$count];
-				}
-				$count++
-			}
-
-			if ($count == 1) {
-				$C = strval($c[$count-1]);
+			if (strlen($a) == 1 && strlen($b) == 1) {
+				$C = strval(intval($a)*intval($b));
 			}else{
-				$lenC = strlen($c[$count-1]);
-				foreach ($c as $key => $value) {
-					$c[$key] = str_pad($value, $lenC, "0", STR_PAD_LEFT);
+				$count = $temp = 0;
+				$A = strval($a);
+				$B = strval($b);
+				$lenA = strlen($a);
+				$lenB = strlen($b);
+				for ($i = $lenB; $i > 0; $i--) {
+					for ($j = $lenA; $j > 0; $j--) { 
+						$mult = (intval($A[$j])+$temp) * intval($B[$i]);
+						if ($mult > 9) {
+							$temp = $mult[0];
+							$mult = $mult[1];
+							$c[$count] = strval($mult).$c[$count];
+						}else{
+							$temp = 0;
+							$c[$count] = $mult.$c[$count];
+						}
+					}
+					if ($count > 0) {
+						$lenC = strlen($c[$count])+$count;
+						$c[$count] = str_pad($c[$count], $lenC, "0", STR_PAD_RIGHT);
+					}
+					if ($j == 1 && $temp !== 0) {
+						$c[$count] = strval($temp).$c[$count];
+					}
+					$count++
 				}
-				$count = 0;
-				$temp = 0;
-				for ($i = $lenC-1; $i >= 0 ; $i--) { 
-					foreach ($c as $value) {
-						$count += intval($value[$i]);
+	
+				if ($count == 1) {
+					$C = strval($c[$count-1]);
+				}else{
+					$lenC = strlen($c[$count-1]);
+					foreach ($c as $key => $value) {
+						$c[$key] = str_pad($value, $lenC, "0", STR_PAD_LEFT);
 					}
-					if ($count > 9) {
-						$len_co = strlen($count);
-						
+					for ($i = $lenC-1; $i >= 0 ; $i--) {
+						$count = $temp = 0; 
+						foreach ($c as $value) {
+							$count += intval($value[$i]);
+						}
+						$count += $temp;
+						if ($count > 9) {
+							$len_co = strlen($count)-1;
+							$temp = intval(substr(strval($count),0,-1));
+							$C = strval($count[$len_co]).$C;
+						}else{
+							$C = strval($count).$C;
+						}
 					}
-					$C = .$C;
+					if ($temp != 0) {
+						$C = strval($temp).$C;
+					}
 				}
 			}
 
@@ -738,6 +746,8 @@ class EulerController extends Controller
 		/*for ($i=1; $i < $n; $i++) { 
 			
 		}*/
+
+		$res = Multiplication('2', '2');
 
 		return $this->render('task016', [
 			'res' => $res,
