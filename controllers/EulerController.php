@@ -681,7 +681,7 @@ class EulerController extends Controller
 	{
 		$num = 2; // число которое возводим в степень.
 		$n = 15; // степень на которую мы возводим число.
-		$res = "$num";
+		$res = (string)$num;
 		/*for ($i=1; $i < $n; $i++) { 
 			
 		}*/
