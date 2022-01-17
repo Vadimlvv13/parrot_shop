@@ -682,6 +682,46 @@ class EulerController extends Controller
 		$num = 2; // число которое возводим в степень.
 		$n = 15; // степень на которую мы возводим число.
 		$res = strval($num);
+		public function Multiplication($a, $b) // произведение двух чисел $a и $b.
+		{
+			$temp = 0;
+			$count = 0;
+			$A = strval($a);
+			$B = strval($b);
+			$lenA = strlen($a);
+			$lenB = strlen($b);
+			for ($i = $lenB; $i > 0; $i--) {
+				for ($j = $lenA; $j > 0; $j--) { 
+					$mult = (intval($A[$j])+$temp) * intval($B[$i]);
+					if ($mult > 9) {
+						$temp = $mult[0];
+						$mult = $mult[1];
+						$c[$count] = strval($mult).$c[$count];
+					}else{
+						$temp = 0;
+						$c[$count] = $mult.$c[$count];
+					}
+				}
+				if ($count > 0) {
+					$lenC = strlen($c[$count])+$count;
+					$c[$count] = str_pad($c[$count], $lenC, "0", STR_PAD_RIGHT);
+				}
+				if ($j == 1 && $temp !== 0) {
+					$c[$count] = strval($temp).$c[$count];
+				}
+				$count++
+			}
+
+			if ($count == 1) {
+				$C = strval($c[$count-1]);
+			}else{
+
+				// !CODE...
+
+			}
+
+			return $C;
+		}
 		/*for ($i=1; $i < $n; $i++) { 
 			
 		}*/
