@@ -715,9 +715,22 @@ class EulerController extends Controller
 			if ($count == 1) {
 				$C = strval($c[$count-1]);
 			}else{
-
-				// !CODE...
-
+				$lenC = strlen($c[$count-1]);
+				foreach ($c as $key => $value) {
+					$c[$key] = str_pad($value, $lenC, "0", STR_PAD_LEFT);
+				}
+				$count = 0;
+				$temp = 0;
+				for ($i = $lenC-1; $i >= 0 ; $i--) { 
+					foreach ($c as $value) {
+						$count += intval($value[$i]);
+					}
+					if ($count > 9) {
+						$len_co = strlen($count);
+						
+					}
+					$C = .$C;
+				}
 			}
 
 			return $C;
