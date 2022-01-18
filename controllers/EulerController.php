@@ -679,7 +679,7 @@ class EulerController extends Controller
    */
 	public function actionTask016()
 	{
-		$num = 2; // число которое возводим в степень.
+		$num = $number = 2; // число которое возводим в степень.
 		$n = 15; // степень на которую мы возводим число.
 		$res = strval($num);
 		function Multiplication($a, $b) // произведение двух чисел $a и $b.
@@ -713,7 +713,7 @@ class EulerController extends Controller
 					}
 					$count++;
 				}
-	//$test = $c;
+
 				if ($count == 1) {
 					$C = strval($c[$count-1]);
 				}else{
@@ -745,11 +745,16 @@ class EulerController extends Controller
 
 			return $C;
 		}
-		/*for ($i=1; $i < $n; $i++) { 
-			
-		}*/
 
-		$res = Multiplication('987652', '963847');
+		for ($i=1; $i < $n; $i++) { 
+			$number = Multiplication($number, $num);
+		}
+		$n = strlen($number);
+		for ($j=0; $j < $n; $j++) { 
+			$res += intval($number[$j]);
+		}
+
+		//$res = Multiplication('987652', '963847');
 
 		return $this->render('task016', [
 			'res' => $res,
