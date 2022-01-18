@@ -727,6 +727,7 @@ class EulerController extends Controller
 							$count += intval($value[$i]);
 						}
 						$count += $temp;
+						$temp = 0;
 						if ($count > 9) {
 							$len_co = strlen($count)-1;
 							$temp = intval(substr(strval($count),0,-1));
