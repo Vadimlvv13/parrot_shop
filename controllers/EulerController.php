@@ -707,7 +707,7 @@ class EulerController extends Controller
 						$lenC = strlen($c[$count])+$count;
 						$c[$count] = str_pad($c[$count], $lenC, "0", STR_PAD_RIGHT);
 					}
-					if ($j == 0 && $temp != 0) {
+					if ($temp != 0) {
 						$c[$count] = strval($temp).$c[$count];
 						$temp = 0;
 					}
