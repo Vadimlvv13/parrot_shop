@@ -618,7 +618,7 @@ class EulerController extends Controller
 		for ($i=1; $i < 1000000; $i++) { 
 			$num = $i;
 			$count = 1;
-			while ($num !== 1) {
+			while ($num != 1) {
 				if ($num % 2 == 0) {
 					$num /= 2;
 				}else{
@@ -703,14 +703,14 @@ class EulerController extends Controller
 							$c[$count] = $mult.$c[$count];
 						}
 					}
-					if ($temp !== 0) {
+					if ($temp != 0) {
 						$c[$count] = strval($temp).$c[$count];
 					}
 					if ($count > 0) {
 						$lenC = strlen($c[$count])+$count;
 						$c[$count] = str_pad($c[$count], $lenC, "0", STR_PAD_RIGHT);
 					}
-					if ($j == 1 && $temp !== 0) {
+					if ($j == 1 && $temp != 0) {
 						$c[$count] = strval($temp).$c[$count];
 					}
 					$count++;
