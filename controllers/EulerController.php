@@ -680,7 +680,7 @@ class EulerController extends Controller
 	public function actionTask016()
 	{
 		$num = $number = 2; // число которое возводим в степень.
-		$n = 30; // степень на которую мы возводим число.
+		$n = 1000; // степень на которую мы возводим число.
 		function Multiplication($a, $b) // произведение двух чисел $a и $b.
 		{
 			if (strlen($a) == 1 && strlen($b) == 1) {
