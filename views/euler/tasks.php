@@ -124,7 +124,7 @@ $this->title = 'Project Euler Tasks List';
             <a href="/web/euler/task016">Задача №16<a>
             <br>
             <p>Сумма цифр степени.</p>
-            <!-- <h5 style="color: green;">Выполнено</h5> -->
+            <h5 style="color: green;">Выполнено</h5>
         </div>
 
         <div class="jumbotron">
