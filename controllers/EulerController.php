@@ -720,9 +720,9 @@ class EulerController extends Controller
 					foreach ($c as $key => $value) {
 						$c[$key] = str_pad($value, $lenC, "0", STR_PAD_LEFT);
 					}
-	$test = $c;				
+					$temp = 0;
 					for ($i = $lenC-1; $i >= 0 ; $i--) {
-						$count = $temp = 0; 
+						$count = 0; 
 						foreach ($c as $value) {
 							$count += intval($value[$i]);
 						}
@@ -741,7 +741,7 @@ class EulerController extends Controller
 				}
 			}
 
-			return $test;
+			return $C;
 		}
 		/*for ($i=1; $i < $n; $i++) { 
 			
