@@ -694,7 +694,7 @@ class EulerController extends Controller
 				$lenB = strlen($b);
 				for ($i = $lenB-1; $i >= 0; $i--) {
 					for ($j = $lenA-1; $j >= 0; $j--) { 
-						$mult = (intval($A[$j])+$temp) * intval($B[$i]);
+						$mult = intval($A[$j]) * intval($B[$i]) + $temp;
 						if ($mult > 9) {
 							$temp = intval(substr(strval($mult),0,-1));
 							$c[$count] = substr(strval($mult),-1).$c[$count];
