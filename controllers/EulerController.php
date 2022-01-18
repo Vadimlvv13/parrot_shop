@@ -700,7 +700,7 @@ class EulerController extends Controller
 							$c[$count] = substr(strval($mult),-1).$c[$count];
 						}else{
 							$temp = 0;
-							$c[$count] = $mult.$c[$count];
+							$c[$count] = strval($mult).$c[$count];
 						}
 					}
 					if ($count > 0) {
@@ -709,6 +709,7 @@ class EulerController extends Controller
 					}
 					if ($j == 0 && $temp != 0) {
 						$c[$count] = strval($temp).$c[$count];
+						$temp = 0;
 					}
 					$count++;
 				}
