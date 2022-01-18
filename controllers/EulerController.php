@@ -711,7 +711,7 @@ class EulerController extends Controller
 					if ($j == 1 && $temp !== 0) {
 						$c[$count] = strval($temp).$c[$count];
 					}
-					$count++
+					$count++;
 				}
 	
 				if ($count == 1) {
