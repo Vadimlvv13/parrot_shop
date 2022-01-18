@@ -747,7 +747,7 @@ class EulerController extends Controller
 			
 		}*/
 
-		$res = Multiplication('11', '22');
+		$res = Multiplication('1234', '567');
 
 		return $this->render('task016', [
 			'res' => $res,
