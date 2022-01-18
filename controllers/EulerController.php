@@ -703,6 +703,9 @@ class EulerController extends Controller
 							$c[$count] = $mult.$c[$count];
 						}
 					}
+					if ($temp !== 0) {
+						$c[$count] = strval($temp).$c[$count];
+					}
 					if ($count > 0) {
 						$lenC = strlen($c[$count])+$count;
 						$c[$count] = str_pad($c[$count], $lenC, "0", STR_PAD_RIGHT);
@@ -727,12 +730,12 @@ class EulerController extends Controller
 							$count += intval($value[$i]);
 						}
 						$count += $temp;
-						$temp = 0;
 						if ($count > 9) {
 							$len_co = strlen($count)-1;
 							$temp = intval(substr(strval($count),0,-1));
 							$C = substr(strval($count),-1).$C;
 						}else{
+							$temp = 0;
 							$C = strval($count).$C;
 						}
 					}
