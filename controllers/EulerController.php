@@ -713,7 +713,7 @@ class EulerController extends Controller
 					}
 					$count++;
 				}
-	//$test = $c;
+	$test = $c;
 				if ($count == 1) {
 					$C = strval($c[$count-1]);
 				}else{
@@ -741,7 +741,7 @@ class EulerController extends Controller
 				}
 			}
 
-			return $C;
+			return $test;
 		}
 		/*for ($i=1; $i < $n; $i++) { 
 			
