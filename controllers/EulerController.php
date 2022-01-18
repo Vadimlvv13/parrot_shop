@@ -703,14 +703,11 @@ class EulerController extends Controller
 							$c[$count] = $mult.$c[$count];
 						}
 					}
-					if ($temp != 0) {
-						$c[$count] = strval($temp).$c[$count];
-					}
 					if ($count > 0) {
 						$lenC = strlen($c[$count])+$count;
 						$c[$count] = str_pad($c[$count], $lenC, "0", STR_PAD_RIGHT);
 					}
-					if ($j == 1 && $temp != 0) {
+					if ($j == 0 && $temp != 0) {
 						$c[$count] = strval($temp).$c[$count];
 					}
 					$count++;
