@@ -36,6 +36,7 @@ $this->title = 'Project Euler Task16';
             echo gettype($res)."<br>";
             echo "Сумма цифр числа 2<sup>1000</sup> = $res."
             //var_dump($res);
+            echo "<br>$number<br>$n";
         ?>
         
 
