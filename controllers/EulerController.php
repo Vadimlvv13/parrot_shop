@@ -770,7 +770,7 @@ class EulerController extends Controller
 
 
 		return $this->render('task017', [
-			,
+			
 		]);
 	}
 }
