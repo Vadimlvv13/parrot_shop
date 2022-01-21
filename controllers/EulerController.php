@@ -766,7 +766,45 @@ class EulerController extends Controller
    */
 	public function actionTask017()
 	{
-		
+		function num2str ($num) {
+			$n1_19[1] = "one";
+			$n1_19[2] = "two";
+			$n1_19[3] = "three";
+			$n1_19[4] = "four";
+			$n1_19[5] = "five";
+			$n1_19[6] = "six";
+			$n1_19[7] = "seven";
+			$n1_19[8] = "eight";
+			$n1_19[9] = "nine";
+			$n1_19[10] = "ten";
+			$n1_19[11] = "eleven";
+			$n1_19[12] = "twelve";
+			$n1_19[13] = "thirteen";
+			$n1_19[14] = "fourteen";
+			$n1_19[15] = "fifteen";
+			$n1_19[16] = "sixteen";
+			$n1_19[17] = "seventeen";
+			$n1_19[18] = "eighteen";
+			$n1_19[19] = "nineteen";
+
+			$des[2] = "twenty";
+			$des[3] = "thirty";
+			$des[4] = "forty";
+			$des[5] = "fifty";
+			$des[6] = "sixty";
+			$des[7] = "seventy";
+			$des[8] = "eighty";
+			$des[9] = "ninety";
+
+			$hundred = "hundred";
+			$thousand = "thousand";
+
+			$len = strlen($num);
+			/*if ($len > ) {
+				// code...
+			}*/
+
+		}
 
 
 		return $this->render('task017', [
