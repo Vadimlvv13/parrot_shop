@@ -131,7 +131,7 @@ $this->title = 'Project Euler Tasks List';
             <a href="/web/euler/task017">Задача №17<a>
             <br>
             <p>Счет букв в числительных.</p>
-            <!-- <h5 style="color: green;">Выполнено</h5> -->
+            <h5 style="color: green;">Выполнено</h5>
         </div>
 
         <div class="jumbotron">

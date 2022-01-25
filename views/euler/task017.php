@@ -36,11 +36,6 @@ $this->title = 'Project Euler Task17';
 
     <div class="body-content">
         <?php 
-            
-            foreach ($test as $value) {
-                echo $value."<br>";
-            }
-
             echo "<br><br>$res - букв понадобится для записи всех чисел от 1 до 1000 включительно.";
         ?>
         

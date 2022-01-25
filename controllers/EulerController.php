@@ -826,8 +826,7 @@ class EulerController extends Controller
 					if ($num == 1000) {
 						$result = $n1_19[$num[0]].' '.$thousand;
 					}
-				}
-				
+				}	
 			}else{
 				if ($num == 0) {
 					$result = "zero";
@@ -846,6 +845,20 @@ class EulerController extends Controller
 
 		return $this->render('task017', [
 			'res' => $res,
+		]);
+	}
+
+	/**
+   * Project Euler task #18.
+   *
+   * @return mixed
+   */
+	public function actionTask018()
+	{
+		
+
+		return $this->render('task018', [
+			
 		]);
 	}
 }
