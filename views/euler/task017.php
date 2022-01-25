@@ -37,7 +37,9 @@ $this->title = 'Project Euler Task17';
     <div class="body-content">
         <?php 
             
-            
+            foreach ($test as $value) {
+                echo $value."<br>"
+            }
         ?>
         
 
