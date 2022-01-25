@@ -808,7 +808,7 @@ class EulerController extends Controller
 					if ($num[1] == 0) {
 						$result = $des[$num[0]];
 					}else{
-						$result = $des[$num[0]].'-'.$des[$num[1]];
+						$result = $des[$num[0]].'-'.$n1_19[$num[1]];
 					}
 				}elseif ($len == 3) {
 					if ($num[2] == 0 && $num[1] == 0) {
