@@ -766,7 +766,7 @@ class EulerController extends Controller
    */
 	public function actionTask017()
 	{
-		function num2str ($num) {
+		function num2str ($n) {
 			$n1_19[1] = "one";
 			$n1_19[2] = "two";
 			$n1_19[3] = "three";
@@ -799,6 +799,7 @@ class EulerController extends Controller
 			$hundred = "hundred";
 			$thousand = "thousand";
 
+			$num = strval($n);
 			$len = strlen($num);
 			if ($len <= 6 && $num != 0) {
 				if ($num < 20) {
