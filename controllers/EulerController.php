@@ -850,7 +850,7 @@ class EulerController extends Controller
 		$test[8] = num2str(537);
 		$test[9] = num2str(1000);
 		$test[10] = num2str(0);
-		$test[11] = preg_replace("/\s/", "", num2str(537));
+		$test[11] = preg_replace("/\s/, /-/", "", num2str(537));
 
 		return $this->render('task017', [
 			'test' => $test,
