@@ -800,12 +800,45 @@ class EulerController extends Controller
 			$thousand = "thousand";
 
 			$len = strlen($num);
-			/*if ($len > ) {
-				// code...
-			}*/
+			if ($len <= 6 && $num != 0) {
+				if ($num < 20) {
+					$result = $n1_19[$num];
+				}elseif ($len == 2) {
+					if ($num[1] == 0) {
+						$result = $des[$num[0]];
+					}else{
+						$result = $des[$num[0]].'-'.$des[$num[1]];
+					}
+				}elseif ($len == 3) {
+					if ($num[2] == 0 && $num[1] == 0) {
+						$result = $n1_19[$num[0]].' '.$hundred;
+					}elseif ($num[2] == 0) {
+						$result = $n1_19[$num[0]].' '.$hundred.' and '.$des[$num[1]];
+					}elseif ($num[1] == 0) {
+						$result = $n1_19[$num[0]].' '.$hundred.' and '.$n1_19[$num[2]];
+					}elseif (substr($num, -2) < 20) {
+						$result = $n1_19[$num[0]].' '.$hundred.' and '.$n1_19[substr($num, -2)];
+					}else{
+						$result = $n1_19[$num[0]].' '.$hundred.' and '.$des[$num[1]].'-'.$n1_19[$num[2]];
+					}
+				}else{
+					if ($num == 1000) {
+						$result = $n1_19[$num[0]].' '.$thousand;
+					}
+				}
+				
+			}else{
+				if ($num == 0) {
+					$result = "zero";
+				}else{
+					$result = "number is too big";
+				}
+			}
 
+			return $result;
 		}
 
+		
 
 		return $this->render('task017', [
 			
