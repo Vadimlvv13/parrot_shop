@@ -854,7 +854,7 @@ class EulerController extends Controller
 		$test[12] = strlen(preg_replace(array("/\s/", "/-/"), "", num2str(342))); 
 
 		$res = 0;
-		for ($i=1; $i <= 5; $i++) { 
+		for ($i=1; $i <= 1000; $i++) { 
 			$res += strlen(preg_replace(array("/\s/", "/-/"), "", num2str($i))); 
 		}
 
