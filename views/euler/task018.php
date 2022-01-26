@@ -23,10 +23,10 @@ $this->title = 'Project Euler Task18';
 
 Начиная в вершине треугольника (см. пример ниже) и перемещаясь вниз на смежные числа, максимальная сумма до основания составляет 23.<br><br>
 
-3<br>
-7 4<br>
-2 4 6<br>
-8 5 9 3<br><br>
+<span style="color:red;">3</span><br>
+<span style="color:red;">7</span> 4<br>
+2 <span style="color:red;">4</span> 6<br>
+8 5 <span style="color:red;">9</span> 3<br><br>
 
 То есть, 3 + 7 + 4 + 9 = 23.<br>
 
