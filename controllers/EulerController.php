@@ -861,5 +861,19 @@ class EulerController extends Controller
 			
 		]);
 	}
+
+	/**
+   * Project Vlad task #1.
+   *
+   * @return mixed
+   */
+	public function actionTaskVlad1()
+	{
+		
+
+		return $this->render('taskvlad1', [
+			
+		]);
+	}
 }
 ?>
