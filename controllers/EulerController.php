@@ -867,7 +867,7 @@ class EulerController extends Controller
    *
    * @return mixed
    */
-	public function actionTaskVlad1()
+	public function actionTaskvlad1()
 	{
 		$i = 1;
 		$j = 2;
