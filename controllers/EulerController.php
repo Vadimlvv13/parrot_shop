@@ -874,6 +874,7 @@ class EulerController extends Controller
 		$count = 0;
 		while ($i/$j > 0.001) {
 			$count++;
+			$mas[] = $i.''.$j;
 			if ($count % 2 == 0) {
 				$sum -= $i/$j;
 			}else{
@@ -884,7 +885,7 @@ class EulerController extends Controller
 		}
 
 		return $this->render('taskvlad1', [
-			'sum' => $sum, 'count' => $count,
+			'sum' => $sum, 'count' => $count, 'mas' => $mas,
 		]);
 	}
 }
