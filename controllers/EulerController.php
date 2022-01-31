@@ -871,15 +871,13 @@ class EulerController extends Controller
 	{
 		$i = 1;
 		$j = 2;
-		$n = $i/$j;
 		$count = 0;
-		while ($n > 0.001) {
+		while ($i/$j > 0.001) {
 			$count++;
-			$n = $i/$j;
 			if ($count % 2 == 0) {
-				$sum -= $n;
+				$sum -= $i/$j;
 			}else{
-				$sum += $n;
+				$sum += $i/$j;
 			}
 			$i++;
 			$j *= 2;
