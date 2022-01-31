@@ -874,7 +874,7 @@ class EulerController extends Controller
 		$count = 0;
 		while ($i/$j > 0.001) {
 			$count++;
-			$mas[] = $i.''.$j;
+			$mas[] = $i.'/'.$j;
 			if ($count % 2 == 0) {
 				$sum -= $i/$j;
 			}else{
