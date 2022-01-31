@@ -869,10 +869,24 @@ class EulerController extends Controller
    */
 	public function actionTaskVlad1()
 	{
-		
+		$i = 1;
+		$j = 2;
+		$n = $i/$j;
+		$count = 0;
+		while ($n > 0.001) {
+			$count++;
+			$n = $i/$j;
+			if ($count % 2 == 0) {
+				$sum -= $n;
+			}else{
+				$sum += $n;
+			}
+			$i++;
+			$j *= 2;
+		}
 
 		return $this->render('taskvlad1', [
-			
+			'sum' => $sum, 'count' => $count,
 		]);
 	}
 }

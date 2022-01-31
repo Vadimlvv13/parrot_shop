@@ -5,7 +5,7 @@
     use yii\widgets\ActiveForm;
     use app\controllers\EulerController;
 
-$this->title = 'Project Euler Task18';
+$this->title = 'Project Euler TaskVlad1';
 ?>
 <div class="euler-task1">
     <h1 class="display-4", style="text-align: center">Проект Влада</h1>
@@ -32,7 +32,8 @@ S = 1/2 - 2/4 + 3/8 - 4/16 + ... - ...
 
     <div class="body-content">
         <?php 
-            
+            echo "Сумма элементов последовательности = $sum<br>";
+            echo "Количество элементов последовательности = $count";
         ?>
         
 
