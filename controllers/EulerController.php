@@ -855,10 +855,14 @@ class EulerController extends Controller
    */
 	public function actionTask018()
 	{
-		
+		$triangle = [[3]], [[7],[4]], [[2],[4],[6]], [[8],[5],[9],[3]];
+		$height = count($triangle);
+		/*function Route($mas){
+
+		}*/
 
 		return $this->render('task018', [
-			
+			'triangle' => $triangle, 'height' => $height,
 		]);
 	}
 

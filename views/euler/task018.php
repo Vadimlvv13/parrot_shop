@@ -58,7 +58,13 @@ $this->title = 'Project Euler Task18';
 
     <div class="body-content">
         <?php 
-            
+            foreach ($triangle as $key => $val){
+                foreach ($triangle[$kay] as $value){
+                    echo "$value ";
+                }
+                echo '<br>';
+            }
+            echo "Высота пирамиды = $height";
         ?>
         
 
