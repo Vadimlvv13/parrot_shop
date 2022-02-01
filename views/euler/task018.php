@@ -58,8 +58,8 @@ $this->title = 'Project Euler Task18';
 
     <div class="body-content">
         <?php 
-            foreach ($triangle as $key => $val){
-                foreach ($triangle[$kay] as $value){
+            foreach ($triangle as $val){
+                foreach ($val as $value){
                     echo "$value ";
                 }
                 echo '<br>';
