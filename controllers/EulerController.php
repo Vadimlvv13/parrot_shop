@@ -823,17 +823,17 @@ class EulerController extends Controller
 				if ($num < 20) {
 					$result = $n1_19[$num];
 				}elseif ($len == 2) {
-					$d = substr($num, -2, 1);	// des
-					$o = substr($num, -1, 1);	// one
+					$d = intval(substr($num, -2, 1));	// des
+					$o = intval(substr($num, -1, 1));	// one
 					if ($o == 0) {
 						$result = $des[$d];
 					}else{
 						$result = $des[$d].'-'.$n1_19[$o];
 					}
 				}elseif ($len == 3) {
-					$h = substr($num, -3, 1);	// hun
-					$d = substr($num, -2, 1);	// des
-					$o = substr($num, -1, 1);	// one
+					$h = intval(substr($num, -3, 1));	// hun
+					$d = intval(substr($num, -2, 1));	// des
+					$o = intval(substr($num, -1, 1));	// one
 					if ($o == 0 && $d == 0) {
 						$result = $n1_19[$h].' '.$hundred;
 					}elseif ($o == 0) {
@@ -847,7 +847,7 @@ class EulerController extends Controller
 					}
 				}else{
 					if ($num == 1000) {
-						$t = substr($num, -4, 1);	// thousand
+						$t = intval(substr($num, -4, 1));	// thousand
 						$result = $n1_19[$t].' '.$thousand;
 					}
 				}	
