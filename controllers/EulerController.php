@@ -820,7 +820,7 @@ class EulerController extends Controller
 			$num = strval($n);
 			$len = strlen($num);
 			if ($len <= 6 && $num != 0) {
-				if ($num < 20) {
+				if ($n < 20) {
 					$result = $n1_19[$num];
 				}elseif ($len == 2) {
 					$d = intval(substr($num, -2, 1));	// des
@@ -840,19 +840,19 @@ class EulerController extends Controller
 						$result = $n1_19[$h].' '.$hundred.' and '.$des[$d];
 					}elseif ($d == 0) {
 						$result = $n1_19[$h].' '.$hundred.' and '.$n1_19[$o];
-					}elseif (substr($num, -2) < 20) {
-						$result = $n1_19[$h].' '.$hundred.' and '.$n1_19[substr($num, -2)];
+					}elseif (intval(substr($num, -2)) < 20) {
+						$result = $n1_19[$h].' '.$hundred.' and '.$n1_19[intval(substr($num, -2))];
 					}else{
 						$result = $n1_19[$h].' '.$hundred.' and '.$des[$d].'-'.$n1_19[$o];
 					}
 				}else{
-					if ($num == 1000) {
+					if ($n == 1000) {
 						$t = intval(substr($num, -4, 1));	// thousand
 						$result = $n1_19[$t].' '.$thousand;
 					}
 				}	
 			}else{
-				if ($num == 0) {
+				if ($n == 0) {
 					$result = "zero";
 				}else{
 					$result = "number is too big";
