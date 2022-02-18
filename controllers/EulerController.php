@@ -823,26 +823,32 @@ class EulerController extends Controller
 				if ($num < 20) {
 					$result = $n1_19[$num];
 				}elseif ($len == 2) {
-					if ($num[1] == 0) {
-						$result = $des[$num[0]];
+					$d = substr($num, -2, 1);	// des
+					$o = substr($num, -1, 1);	// one
+					if ($o == 0) {
+						$result = $des[$d];
 					}else{
-						$result = $des[$num[0]].'-'.$n1_19[$num[1]];
+						$result = $des[$d].'-'.$n1_19[$o];
 					}
 				}elseif ($len == 3) {
-					if ($num[2] == 0 && $num[1] == 0) {
-						$result = $n1_19[$num[0]].' '.$hundred;
-					}elseif ($num[2] == 0) {
-						$result = $n1_19[$num[0]].' '.$hundred.' and '.$des[$num[1]];
-					}elseif ($num[1] == 0) {
-						$result = $n1_19[$num[0]].' '.$hundred.' and '.$n1_19[$num[2]];
+					$h = substr($num, -3, 1);	// hun
+					$d = substr($num, -2, 1);	// des
+					$o = substr($num, -1, 1);	// one
+					if ($o == 0 && $d == 0) {
+						$result = $n1_19[$h].' '.$hundred;
+					}elseif ($o == 0) {
+						$result = $n1_19[$h].' '.$hundred.' and '.$des[$d];
+					}elseif ($d == 0) {
+						$result = $n1_19[$h].' '.$hundred.' and '.$n1_19[$o];
 					}elseif (substr($num, -2) < 20) {
-						$result = $n1_19[$num[0]].' '.$hundred.' and '.$n1_19[substr($num, -2)];
+						$result = $n1_19[$h].' '.$hundred.' and '.$n1_19[substr($num, -2)];
 					}else{
-						$result = $n1_19[$num[0]].' '.$hundred.' and '.$des[$num[1]].'-'.$n1_19[$num[2]];
+						$result = $n1_19[$h].' '.$hundred.' and '.$des[$d].'-'.$n1_19[$o];
 					}
 				}else{
 					if ($num == 1000) {
-						$result = $n1_19[$num[0]].' '.$thousand;
+						$t = substr($num, -4, 1);	// thousand
+						$result = $n1_19[$t].' '.$thousand;
 					}
 				}	
 			}else{
