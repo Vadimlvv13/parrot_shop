@@ -271,6 +271,7 @@ class EulerController extends Controller
 	public function actionTask009()
 	{
 		$m = 1;
+		$res == NULL;
 		while ($res == NULL){
 			$m += 1; 
 			for ($n=1; $n < $m; $n++) { 
