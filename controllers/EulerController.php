@@ -692,7 +692,6 @@ class EulerController extends Controller
 		$n = 1000; // степень на которую мы возводим число.
 		function Multiplication($a, $b) // произведение двух чисел $a и $b.
 		{
-			$c = "";
 			if (strlen($a) == 1 && strlen($b) == 1) {
 				$C = strval(intval($a)*intval($b));
 			}else{
@@ -706,7 +705,11 @@ class EulerController extends Controller
 						$mult = intval($A[$j]) * intval($B[$i]) + $temp;
 						if ($mult > 9) {
 							$temp = intval(substr(strval($mult),0,-1));
-							$c[$count] = substr(strval($mult),-1).$c[$count];
+							if (isset($c[$count])) {
+								$c[$count] = substr(strval($mult),-1).$c[$count];
+							}else{
+								$c[$count] = substr(strval($mult),-1);
+							}
 						}else{
 							$temp = 0;
 							$c[$count] = strval($mult).$c[$count];
