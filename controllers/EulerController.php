@@ -408,6 +408,7 @@ class EulerController extends Controller
 		}
 		$flip = flipmatrix($matrix);
 		$mas = [multrow($matrix), multrow($trans), multdia($matrix), multdia($flip)];
+		$result[0] = 0;
 		foreach ($mas as $value) {
 			if ($value[0] > $result[0]) {
 				$result = [$value[0], $value[1], $value[2], $value[3], $value[4]];
