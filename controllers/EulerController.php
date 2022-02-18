@@ -805,6 +805,7 @@ class EulerController extends Controller
 			$n1_19[18] = "eighteen";
 			$n1_19[19] = "nineteen";
 
+			$des[1] = "ten";
 			$des[2] = "twenty";
 			$des[3] = "thirty";
 			$des[4] = "forty";
