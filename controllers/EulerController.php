@@ -766,6 +766,7 @@ class EulerController extends Controller
 			$number = Multiplication($number, $num);
 		}
 		$n = strlen($number);
+		$res = 0;
 		for ($j=0; $j < $n; $j++) { 
 			$res += intval($number[$j]);
 		}
