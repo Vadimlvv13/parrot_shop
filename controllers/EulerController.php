@@ -586,6 +586,7 @@ class EulerController extends Controller
 		function SumOfNumbers($array){
 			$sum = '';
 			$temp = 0;
+			$result = NULL;
 			foreach ($array as $val) {
 				$len = max(strlen($sum), strlen($val));
 				$num1 = str_pad($sum, $len, "0", STR_PAD_LEFT);
