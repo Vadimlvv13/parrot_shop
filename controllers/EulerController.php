@@ -385,6 +385,7 @@ class EulerController extends Controller
 		}
 		// Умножение каждых 4 чисел по диагонали
 		function multdia($arr){
+			$res[0] = 0;
 			$row = count($arr);
 			$col = count($arr[0]);
 			if ($row >= 4 && $col >= 4){
