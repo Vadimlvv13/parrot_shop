@@ -367,7 +367,7 @@ class EulerController extends Controller
 		}
 		// Умножение каждых 4 чисел в рядах
 		function multrow($arr){
-			$res = 0;
+			$res[0] = 0;
 			foreach ($arr as $val) {
 				$i = 0;
 				while (isset($val[$i+3])){
