@@ -440,7 +440,7 @@ class EulerController extends Controller
 						}
 					}
 				}while($int != 1);
-				$a = 0;
+				$a = $b = 0;
 				foreach ($div as $key => $val) {
 					if ($val == $a) {
 						$mult[$key-1-$b] += 1;
@@ -458,8 +458,7 @@ class EulerController extends Controller
 			return $res;
 		}
 
-		$i = 0;
-		$num = 0;
+		$i = $num = 0;
 		$result = NULL;
 		do{
 			$i += 1;
