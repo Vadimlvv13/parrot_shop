@@ -457,6 +457,8 @@ class EulerController extends Controller
 			return $res;
 		}
 
+		$i = 0;
+		$result = NULL;
 		do{
 			$i += 1;
 			$num += $i;
