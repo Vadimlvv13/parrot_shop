@@ -712,7 +712,11 @@ class EulerController extends Controller
 							}
 						}else{
 							$temp = 0;
-							$c[$count] = strval($mult).$c[$count];
+							if (isset($c[$count])) {
+								$c[$count] = strval($mult).$c[$count];
+							}else{
+								$c[$count] = strval($mult);
+							}
 						}
 					}
 					if ($count > 0) {
