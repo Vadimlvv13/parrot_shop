@@ -243,6 +243,7 @@ class EulerController extends Controller
 	public function actionTask008()
 	{
 		$str = "7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450";
+		$res[0] = 0;
 
 		
 		for ($i=0; $i < strlen($str); $i++) {
@@ -270,6 +271,7 @@ class EulerController extends Controller
 	public function actionTask009()
 	{
 		$m = 1;
+		$res = NULL;
 		while ($res == NULL){
 			$m += 1; 
 			for ($n=1; $n < $m; $n++) { 
@@ -365,6 +367,7 @@ class EulerController extends Controller
 		}
 		// Умножение каждых 4 чисел в рядах
 		function multrow($arr){
+			$res[0] = 0;
 			foreach ($arr as $val) {
 				$i = 0;
 				while (isset($val[$i+3])){
@@ -382,6 +385,7 @@ class EulerController extends Controller
 		}
 		// Умножение каждых 4 чисел по диагонали
 		function multdia($arr){
+			$res[0] = 0;
 			$row = count($arr);
 			$col = count($arr[0]);
 			if ($row >= 4 && $col >= 4){
@@ -404,6 +408,7 @@ class EulerController extends Controller
 		}
 		$flip = flipmatrix($matrix);
 		$mas = [multrow($matrix), multrow($trans), multdia($matrix), multdia($flip)];
+		$result[0] = 0;
 		foreach ($mas as $value) {
 			if ($value[0] > $result[0]) {
 				$result = [$value[0], $value[1], $value[2], $value[3], $value[4]];
@@ -435,6 +440,7 @@ class EulerController extends Controller
 						}
 					}
 				}while($int != 1);
+				$a = $b = 0;
 				foreach ($div as $key => $val) {
 					if ($val == $a) {
 						$mult[$key-1-$b] += 1;
@@ -452,6 +458,8 @@ class EulerController extends Controller
 			return $res;
 		}
 
+		$i = $num = 0;
+		$result = NULL;
 		do{
 			$i += 1;
 			$num += $i;
@@ -578,6 +586,7 @@ class EulerController extends Controller
 		function SumOfNumbers($array){
 			$sum = '';
 			$temp = 0;
+			$result = NULL;
 			foreach ($array as $val) {
 				$len = max(strlen($sum), strlen($val));
 				$num1 = str_pad($sum, $len, "0", STR_PAD_LEFT);
@@ -696,10 +705,18 @@ class EulerController extends Controller
 						$mult = intval($A[$j]) * intval($B[$i]) + $temp;
 						if ($mult > 9) {
 							$temp = intval(substr(strval($mult),0,-1));
-							$c[$count] = substr(strval($mult),-1).$c[$count];
+							if (isset($c[$count])) {
+								$c[$count] = substr(strval($mult),-1).$c[$count];
+							}else{
+								$c[$count] = substr(strval($mult),-1);
+							}
 						}else{
 							$temp = 0;
-							$c[$count] = strval($mult).$c[$count];
+							if (isset($c[$count])) {
+								$c[$count] = strval($mult).$c[$count];
+							}else{
+								$c[$count] = strval($mult);
+							}
 						}
 					}
 					if ($count > 0) {
@@ -749,6 +766,7 @@ class EulerController extends Controller
 			$number = Multiplication($number, $num);
 		}
 		$n = strlen($number);
+		$res = 0;
 		for ($j=0; $j < $n; $j++) { 
 			$res += intval($number[$j]);
 		}
@@ -787,6 +805,7 @@ class EulerController extends Controller
 			$n1_19[18] = "eighteen";
 			$n1_19[19] = "nineteen";
 
+			$des[1] = "ten";
 			$des[2] = "twenty";
 			$des[3] = "thirty";
 			$des[4] = "forty";
@@ -802,33 +821,39 @@ class EulerController extends Controller
 			$num = strval($n);
 			$len = strlen($num);
 			if ($len <= 6 && $num != 0) {
-				if ($num < 20) {
+				if ($n < 20) {
 					$result = $n1_19[$num];
 				}elseif ($len == 2) {
-					if ($num[1] == 0) {
-						$result = $des[$num[0]];
+					$d = intval(substr($num, -2, 1));	// des
+					$o = intval(substr($num, -1, 1));	// one
+					if ($o == 0) {
+						$result = $des[$d];
 					}else{
-						$result = $des[$num[0]].'-'.$n1_19[$num[1]];
+						$result = $des[$d].'-'.$n1_19[$o];
 					}
 				}elseif ($len == 3) {
-					if ($num[2] == 0 && $num[1] == 0) {
-						$result = $n1_19[$num[0]].' '.$hundred;
-					}elseif ($num[2] == 0) {
-						$result = $n1_19[$num[0]].' '.$hundred.' and '.$des[$num[1]];
-					}elseif ($num[1] == 0) {
-						$result = $n1_19[$num[0]].' '.$hundred.' and '.$n1_19[$num[2]];
-					}elseif (substr($num, -2) < 20) {
-						$result = $n1_19[$num[0]].' '.$hundred.' and '.$n1_19[substr($num, -2)];
+					$h = intval(substr($num, -3, 1));	// hun
+					$d = intval(substr($num, -2, 1));	// des
+					$o = intval(substr($num, -1, 1));	// one
+					if ($o == 0 && $d == 0) {
+						$result = $n1_19[$h].' '.$hundred;
+					}elseif ($o == 0) {
+						$result = $n1_19[$h].' '.$hundred.' and '.$des[$d];
+					}elseif ($d == 0) {
+						$result = $n1_19[$h].' '.$hundred.' and '.$n1_19[$o];
+					}elseif (intval(substr($num, -2)) < 20) {
+						$result = $n1_19[$h].' '.$hundred.' and '.$n1_19[intval(substr($num, -2))];
 					}else{
-						$result = $n1_19[$num[0]].' '.$hundred.' and '.$des[$num[1]].'-'.$n1_19[$num[2]];
+						$result = $n1_19[$h].' '.$hundred.' and '.$des[$d].'-'.$n1_19[$o];
 					}
 				}else{
-					if ($num == 1000) {
-						$result = $n1_19[$num[0]].' '.$thousand;
+					if ($n == 1000) {
+						$t = intval(substr($num, -4, 1));	// thousand
+						$result = $n1_19[$t].' '.$thousand;
 					}
 				}	
 			}else{
-				if ($num == 0) {
+				if ($n == 0) {
 					$result = "zero";
 				}else{
 					$result = "number is too big";
@@ -857,9 +882,11 @@ class EulerController extends Controller
 	{
 		$triangle = [[3], [7, 4], [2, 4, 6], [8, 5, 9, 3]];
 		$height = count($triangle);
-		/*function Route($mas){
-
-		}*/
+		function Route($mas){
+			for ($i=0; $i < $height; $i++) { 
+				
+			}
+		}
 
 		return $this->render('task018', [
 			'triangle' => $triangle, 'height' => $height,
