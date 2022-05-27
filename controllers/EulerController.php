@@ -920,11 +920,11 @@ class EulerController extends Controller
 	}
 
 	/**
-   * Project Vlad task #1.
+   * Numbers.
    *
    * @return mixed
    */
-	public function actionTestform()
+	public function actionNumbers()
 	{
 		$model = new NumbersForm();
 
