@@ -918,5 +918,30 @@ class EulerController extends Controller
 			'sum' => $sum, 'count' => $count, 'mas' => $mas,
 		]);
 	}
+
+	/**
+   * Project Vlad task #1.
+   *
+   * @return mixed
+   */
+	public function actionTestform()
+	{
+		$model = new NumbersForm();
+
+		if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            // данные в $model удачно проверены
+
+            // делаем что-то полезное с $model ...
+ 
+            return $this->render('numbers-confirm', ['model' => $model]);
+        } else {
+            // либо страница отображается первый раз, либо есть ошибка в данных
+
+		return $this->render('numbers', [
+			'model' => $model
+		]);
+		}
+	}
+
 }
 ?>
