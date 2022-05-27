@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use yii;
 use yii\base\Model;
 
 /**
@@ -15,8 +16,9 @@ class NumbersForm extends Model
 
 	public function rules(){
 		return [
-			[ ['number1', 'number2'], 'string', 'max' => 3, 'tooLong' => 'Слишком большое значение' ],
-			[ ['number1', 'number2'], 'trim'],
+			[ ['number1', 'number2'], 'required'],//, 'max' => 3, 'tooLong' => 'Слишком большое значение' 
+		
+			//[ ['number1', 'number2'], 'trim'],
 		];
 	}
 
